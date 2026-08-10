@@ -23,20 +23,38 @@ I build async, high-performance backend systems in Python — mostly Django and 
 
 **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)** — an async CRUD framework built on [Django Ninja](https://django-ninja.dev/), providing automated REST API generation with async support, authentication, filtering, pagination, and serialization out of the box.
 
-<img src="https://img.shields.io/pypi/v/django-ninja-aio-crud?color=6D28D9&label=PyPI&style=plastic" />
-<img src="https://img.shields.io/pypi/pyversions/django-ninja-aio-crud?color=4C1D95&style=plastic" />
-<img src="https://img.shields.io/github/license/caspel26/django-ninja-aio-crud?color=1E1B4B&style=plastic" />
-<img src="https://img.shields.io/pypi/dm/django-ninja-aio-crud?color=6D28D9&style=plastic" />
-<img src="https://img.shields.io/github/stars/caspel26/django-ninja-aio-crud?style=plastic&color=6D28D9" />
+```
+pip install django-ninja-aio-crud
+```
+
+<img src="https://img.shields.io/pypi/v/django-ninja-aio-crud?style=flat-square&label=pypi&labelColor=1E1B4B&color=6D28D9" /> <img src="https://img.shields.io/pypi/pyversions/django-ninja-aio-crud?style=flat-square&label=python&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/pypi/dm/django-ninja-aio-crud?style=flat-square&label=downloads&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/django-ninja-aio-crud?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
 <!-- ============ OTHER PROJECTS ============ -->
 ### Other Projects
 
-| Project | Description | Stack |
-|---|---|---|
-| **[ninja-aio-blog-example](https://github.com/caspel26/ninja-aio-blog-example)** | Production-oriented example integrating django-ninja-aio-crud with JWT (RS256) authentication | <img src="https://skillicons.dev/icons?i=python,django&theme=dark" height="32"/> |
-| **[ssh-manager](https://github.com/caspel26/ssh-manager)** | A Vue-based SSH connection manager | <img src="https://skillicons.dev/icons?i=vue&theme=dark" height="32"/> |
-| **[password_manager](https://github.com/caspel26/password_manager)** | A password manager that encrypts stored credentials with RSA keys | <img src="https://skillicons.dev/icons?i=python,vue&theme=dark" height="32"/> |
+**[ninja-aio-blog-example](https://github.com/caspel26/ninja-aio-blog-example)** — production-oriented example integrating django-ninja-aio-crud with JWT (RS256) authentication.
+
+```
+git clone https://github.com/caspel26/ninja-aio-blog-example
+```
+
+<img src="https://img.shields.io/github/languages/top/caspel26/ninja-aio-blog-example?style=flat-square&label=lang&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/github/last-commit/caspel26/ninja-aio-blog-example?style=flat-square&label=updated&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/ninja-aio-blog-example?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+
+**[ssh-manager](https://github.com/caspel26/ssh-manager)** — a Vue-based SSH connection manager.
+
+```
+git clone https://github.com/caspel26/ssh-manager
+```
+
+<img src="https://img.shields.io/github/languages/top/caspel26/ssh-manager?style=flat-square&label=lang&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/github/last-commit/caspel26/ssh-manager?style=flat-square&label=updated&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/ssh-manager?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+
+**[password_manager](https://github.com/caspel26/password_manager)** — a password manager that encrypts stored credentials with RSA keys.
+
+```
+git clone https://github.com/caspel26/password_manager
+```
+
+<img src="https://img.shields.io/github/languages/top/caspel26/password_manager?style=flat-square&label=lang&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/github/last-commit/caspel26/password_manager?style=flat-square&label=updated&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/password_manager?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
 <!-- ============ TECH STACK ============ -->
 ### Tech Stack

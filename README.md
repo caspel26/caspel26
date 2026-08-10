@@ -38,7 +38,7 @@ pip install django-ninja-aio-crud
 git clone https://github.com/caspel26/ninja-aio-blog-example
 ```
 
-<img src="https://img.shields.io/github/languages/top/caspel26/ninja-aio-blog-example?style=flat-square&label=lang&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/github/last-commit/caspel26/ninja-aio-blog-example?style=flat-square&label=updated&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/ninja-aio-blog-example?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+<img src="https://img.shields.io/badge/lang-Python-3776AB?style=flat-square&labelColor=1E1B4B" /> <img src="https://img.shields.io/github/stars/caspel26/ninja-aio-blog-example?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
 **[ssh-manager](https://github.com/caspel26/ssh-manager)** — a Vue-based SSH connection manager.
 
@@ -46,7 +46,7 @@ git clone https://github.com/caspel26/ninja-aio-blog-example
 git clone https://github.com/caspel26/ssh-manager
 ```
 
-<img src="https://img.shields.io/github/languages/top/caspel26/ssh-manager?style=flat-square&label=lang&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/github/last-commit/caspel26/ssh-manager?style=flat-square&label=updated&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/ssh-manager?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+<img src="https://img.shields.io/badge/lang-Vue-4FC08D?style=flat-square&labelColor=1E1B4B" /> <img src="https://img.shields.io/github/stars/caspel26/ssh-manager?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
 **[password_manager](https://github.com/caspel26/password_manager)** — a password manager that encrypts stored credentials with RSA keys.
 
@@ -54,7 +54,7 @@ git clone https://github.com/caspel26/ssh-manager
 git clone https://github.com/caspel26/password_manager
 ```
 
-<img src="https://img.shields.io/github/languages/top/caspel26/password_manager?style=flat-square&label=lang&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/github/last-commit/caspel26/password_manager?style=flat-square&label=updated&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/password_manager?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+<img src="https://img.shields.io/badge/lang-Vue-4FC08D?style=flat-square&labelColor=1E1B4B" /> <img src="https://img.shields.io/github/stars/caspel26/password_manager?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
 <!-- ============ TECH STACK ============ -->
 ### Tech Stack

@@ -42,13 +42,7 @@ I build async, high-performance backend systems in Python — mostly Django and 
 <!-- ============ TECH STACK ============ -->
 ### Tech Stack
 
-**Languages, frameworks & infra**
-
-<img src="https://skillicons.dev/icons?i=python,django,fastapi,nodejs,go,vue,postgres,redis,docker,git,githubactions,pytest&theme=dark" />
-
-**AI · LLM**
-
-<img src="https://skillicons.dev/icons?i=anthropic,langchain&theme=dark" />
+<img src="https://skillicons.dev/icons?i=python,django,fastapi,nodejs,go,vue,postgres,redis,docker,git,githubactions,pytest,anthropic,langchain&theme=dark" />
 
 <sub>Also work with Django Ninja day to day — no icon for it yet, but it's the base of <a href="https://github.com/caspel26/django-ninja-aio-crud">django-ninja-aio-crud</a>.</sub>
 
@@ -57,8 +51,8 @@ I build async, high-performance backend systems in Python — mostly Django and 
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats-hazel-six-16.vercel.app/api?username=caspel26&show_icons=true&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3&count_private=true" />
-<img height="165" src="https://github-readme-stats-hazel-six-16.vercel.app/api/top-langs/?username=caspel26&layout=compact&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3" />
+<img src="https://github-readme-stats-hazel-six-16.vercel.app/api?username=caspel26&show_icons=true&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3&count_private=true&card_width=440" />
+<img src="https://github-readme-stats-hazel-six-16.vercel.app/api/top-langs/?username=caspel26&layout=compact&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3&card_width=440" />
 
 <br/>
 

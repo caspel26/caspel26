@@ -42,9 +42,58 @@ I build async, high-performance backend systems in Python — mostly Django and 
 <!-- ============ TECH STACK ============ -->
 ### Tech Stack
 
-<img src="https://skillicons.dev/icons?i=python,django,fastapi,nodejs,go,vue,postgres,redis,docker,git,githubactions,pytest,anthropic,langchain&theme=dark" />
+**Languages**
 
-<sub>Also work with Django Ninja day to day — no icon for it yet, but it's the base of <a href="https://github.com/caspel26/django-ninja-aio-crud">django-ninja-aio-crud</a>.</sub>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/Go-00ADD8?style=flat&logo=go&logoColor=white" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" />
+
+**Backend**
+
+<img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white" />
+<img src="https://img.shields.io/badge/Django%20Ninja-black?style=flat&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/Gin-00ADD8?style=flat&logo=gin&logoColor=white" />
+<img src="https://img.shields.io/badge/Echo-00ADD8?style=flat" />
+<img src="https://img.shields.io/badge/Huma-00ADD8?style=flat" />
+<img src="https://img.shields.io/badge/GORM-00ADD8?style=flat&logo=go&logoColor=white" />
+
+**Frontend**
+
+<img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat&logo=vuedotjs&logoColor=white" />
+
+**Data**
+
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white" />
+<img src="https://img.shields.io/badge/Redis-DC382D?style=flat&logo=redis&logoColor=white" />
+
+**DevOps**
+
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/GitLab-FC6D26?style=flat&logo=gitlab&logoColor=white" />
+<img src="https://img.shields.io/badge/GitHub%20Actions%20(CI%2FCD)-2088FF?style=flat&logo=githubactions&logoColor=white" />
+<img src="https://img.shields.io/badge/HAProxy-6D28D9?style=flat" />
+<img src="https://img.shields.io/badge/Nginx-009639?style=flat&logo=nginx&logoColor=white" />
+<img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
+<img src="https://img.shields.io/badge/Jenkins-D24939?style=flat&logo=jenkins&logoColor=white" />
+
+**Testing**
+
+<img src="https://img.shields.io/badge/Pytest-0A9EDC?style=flat&logo=pytest&logoColor=white" />
+<img src="https://img.shields.io/badge/Playwright-6D28D9?style=flat" />
+
+**AI · LLM**
+
+<img src="https://img.shields.io/badge/Anthropic-191919?style=flat&logo=anthropic&logoColor=white" />
+<img src="https://img.shields.io/badge/OpenAI-412991?style=flat" />
+<img src="https://img.shields.io/badge/Gemini-8E75B2?style=flat&logo=googlegemini&logoColor=white" />
+<img src="https://img.shields.io/badge/Perplexity-1FB8CD?style=flat&logo=perplexity&logoColor=white" />
 
 <!-- ============ GITHUB STATS ============ -->
 ### GitHub Stats
@@ -56,9 +105,7 @@ I build async, high-performance backend systems in Python — mostly Django and 
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=caspel26&hide_border=true&background=1E1B4B&ring=A78BFA&fire=C4B5FD&currStreakLabel=E6EDF3&sideLabels=E6EDF3&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=9198A1&border=1E1B4B" />
-
-<br/>
+<img width="700" src="https://github-readme-streak-stats.herokuapp.com/?user=caspel26&hide_border=true&background=1E1B4B&ring=A78BFA&fire=C4B5FD&currStreakLabel=E6EDF3&sideLabels=E6EDF3&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=9198A1&border=1E1B4B" />
 
 <img width="495" src="https://github-readme-activity-graph.vercel.app/graph?username=caspel26&hide_border=true&bg_color=1E1B4B&color=E6EDF3&line=A78BFA&point=C4B5FD&area_color=6D28D9&area=true" />
 

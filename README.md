@@ -35,6 +35,8 @@ pip install django-ninja-aio-crud
 
 <img src="https://img.shields.io/pypi/v/django-ninja-aio-crud?style=flat-square&label=pypi&labelColor=1E1B4B&color=6D28D9" /> <img src="https://img.shields.io/pypi/pyversions/django-ninja-aio-crud?style=flat-square&label=python&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/pypi/dm/django-ninja-aio-crud?style=flat-square&label=downloads&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/django-ninja-aio-crud?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
+<img src="https://raw.githubusercontent.com/caspel26/django-ninja-aio-crud/main/docs/images/quickstart-demo.gif" alt="django-ninja-aio-crud quick start demo" width="100%" />
+
 <br>
 
 #### [shimwire](https://github.com/caspel26/shimwire)

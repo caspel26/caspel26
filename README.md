@@ -2,9 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:6d28d9,100:c4b5fd&height=220&section=header&text=Hi%2C%20I'm%20Giuseppe%20%F0%9F%91%8B&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%40%20Namirial%20Group&descAlignY=55&descSize=18" width="100%"/>
 
-<a href="https://github.com/caspel26">
-  <img src="https://scribesvg.vercel.app/api/render?lines=Software%20Engineer%20%40%20Namirial%20Group%3BMostly%20Backend%20%7C%20Python%20%7C%20Async%20APIs%3BBuilding%20django-ninja-aio-crud%20%F0%9F%9A%80%3BAlways%20shipping%2C%20always%20learning&layout=terminal&background=1E1B4B&color=E6EDF3&cursorColor=A78BFA&font=Fira%20Code&width=750&height=210&size=20&speed=70&deleteSpeed=40&pause=1200&cursor=pipe&attribution=false&center=true" alt="Terminal typing animation" />
-</a>
+<img src="assets/terminal.svg" alt="Terminal session" width="700" />
 
 </div>
 
@@ -98,18 +96,13 @@ I build async, high-performance backend systems in Python — mostly Django and 
 <!-- ============ GITHUB STATS ============ -->
 ### GitHub Stats
 
-<div align="center">
+<img width="700" src="https://github-readme-stats-hazel-six-16.vercel.app/api?username=caspel26&show_icons=true&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3&count_private=true" />
 
-<img src="https://github-readme-stats-hazel-six-16.vercel.app/api?username=caspel26&show_icons=true&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3&count_private=true&card_width=495" />
-<img src="https://github-readme-stats-hazel-six-16.vercel.app/api/top-langs/?username=caspel26&layout=compact&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3&card_width=495" />
-
-<br/>
+<img width="700" src="https://github-readme-stats-hazel-six-16.vercel.app/api/top-langs/?username=caspel26&layout=compact&hide_border=true&bg_color=1E1B4B&title_color=A78BFA&icon_color=C4B5FD&text_color=E6EDF3" />
 
 <img width="700" src="https://github-readme-streak-stats.herokuapp.com/?user=caspel26&hide_border=true&background=1E1B4B&ring=A78BFA&fire=C4B5FD&currStreakLabel=E6EDF3&sideLabels=E6EDF3&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=9198A1&border=1E1B4B" />
 
-<img width="495" src="https://github-readme-activity-graph.vercel.app/graph?username=caspel26&hide_border=true&bg_color=1E1B4B&color=E6EDF3&line=A78BFA&point=C4B5FD&area_color=6D28D9&area=true" />
-
-</div>
+<img width="700" src="https://github-readme-activity-graph.vercel.app/graph?username=caspel26&hide_border=true&bg_color=1E1B4B&color=E6EDF3&line=A78BFA&point=C4B5FD&area_color=6D28D9&area=true" />
 
 <!-- ============ CONNECT ============ -->
 ### Connect With Me

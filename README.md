@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:6d28d9,100:c4b5fd&height=220&section=header&text=Hi%2C%20I'm%20Giuseppe%20%F0%9F%91%8B&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%40%20Namirial%20Group&descAlignY=55&descSize=18" width="100%"/>
 
-<img src="assets/terminal.svg" alt="Terminal session" width="700" />
+<img src="assets/terminal.svg" alt="Terminal session" width="100%" />
 
 </div>
 
@@ -89,3 +89,4 @@ pip install django-ninja-aio-crud
 <a href="mailto:peppe.c0126@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:c4b5fd,50:6d28d9,100:1e1b4b&height=100&section=footer" width="100%"/>
+****

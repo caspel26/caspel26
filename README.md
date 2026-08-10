@@ -11,12 +11,7 @@
 
 I build async, high-performance backend systems in Python — mostly Django and Django Ninja — and care as much about how a system is put together as about the code itself. Lately that includes wiring LLMs into real production backends rather than just prototyping with them. Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework built on top of Django Ninja.
 
-<img src="https://img.shields.io/badge/Software%20Engineer-6D28D9?style=flat-square" />
-<img src="https://img.shields.io/badge/Namirial%20Group-4C1D95?style=flat-square" />
-<img src="https://img.shields.io/badge/Backend%20%C2%B7%20Python-1E1B4B?style=flat-square" />
-<img src="https://img.shields.io/badge/Vue%20%C2%B7%20Node%20%C2%B7%20Go-A78BFA?style=flat-square" />
-<img src="https://img.shields.io/badge/LLMs%20%C2%B7%20System%20Design-6D28D9?style=flat-square" />
-<img src="https://img.shields.io/badge/Email-peppe.c0126%40gmail.com-4C1D95?style=flat-square&logo=gmail&logoColor=white" />
+<img src="https://img.shields.io/badge/Software%20Engineer-6D28D9?style=flat-square" /> <img src="https://img.shields.io/badge/Namirial%20Group-4C1D95?style=flat-square" /> <img src="https://img.shields.io/badge/Backend%20%C2%B7%20Python-1E1B4B?style=flat-square" /> <img src="https://img.shields.io/badge/Vue%20%C2%B7%20Node%20%C2%B7%20Go-A78BFA?style=flat-square" /> <img src="https://img.shields.io/badge/LLMs%20%C2%B7%20System%20Design-6D28D9?style=flat-square" /> <img src="https://img.shields.io/badge/Email-peppe.c0126%40gmail.com-4C1D95?style=flat-square&logo=gmail&logoColor=white" />
 
 <!-- ============ FEATURED PROJECT ============ -->
 ### Featured Project
@@ -83,11 +78,6 @@ git clone https://github.com/caspel26/password_manager
 <!-- ============ CONNECT ============ -->
 ### Connect With Me
 
-<a href="mailto:peppe.c0126@gmail.com">
-  <img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" />
-</a>
-<a href="https://github.com/caspel26">
-  <img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" />
-</a>
+<a href="mailto:peppe.c0126@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:c4b5fd,50:6d28d9,100:1e1b4b&height=100&section=footer" width="100%"/>

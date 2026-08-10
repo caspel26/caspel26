@@ -11,10 +11,10 @@
 
 Software engineer focused on high-performance async Python, Django/Django Ninja, and production LLM integrations.
 
-I build async CRUD frameworks and backend systems, then wire LLMs into them for real product workflows — not just prototypes. Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars.
+I build async CRUD frameworks and backend systems, then wire LLMs into them for real product workflows — not just prototypes. Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and I'm building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
 
-<!-- ============ FEATURED PROJECT ============ -->
-### Featured Project
+<!-- ============ FEATURED PROJECTS ============ -->
+### Featured Projects
 
 #### [django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)
 
@@ -35,6 +35,29 @@ pip install django-ninja-aio-crud
 
 <img src="https://img.shields.io/pypi/v/django-ninja-aio-crud?style=flat-square&label=pypi&labelColor=1E1B4B&color=6D28D9" /> <img src="https://img.shields.io/pypi/pyversions/django-ninja-aio-crud?style=flat-square&label=python&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/pypi/dm/django-ninja-aio-crud?style=flat-square&label=downloads&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/django-ninja-aio-crud?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
+<br>
+
+#### [shimwire](https://github.com/caspel26/shimwire)
+
+One CLI for both sides of an API you don't fully control yet — mocks the parts that aren't built, and tests the parts that are, from a single OpenAPI/Swagger spec.
+
+- 🔀 Spec-driven mock server and test collections, from one shared engine
+- 📁 Git-native collections — plain TOML, reviewable in a normal PR diff
+- 🎭 Schema-aware fake data, not just random junk
+- 🎯 Overrides for status/latency/exact-body edge-case testing
+- 🖱️ Guided interactive menu, or full CI-friendly flags
+- 📊 HTML reports and `--fail-on-error` for CI
+
+[GitHub](https://github.com/caspel26/shimwire)
+
+```
+git clone https://github.com/caspel26/shimwire && cd shimwire && bun install
+```
+
+<img src="https://github.com/caspel26/shimwire/actions/workflows/ci.yml/badge.svg" /> <img src="https://img.shields.io/badge/runtime-bun-1E1B4B?style=flat-square&logo=bun&logoColor=white" /> <img src="https://img.shields.io/badge/lang-TypeScript-6D28D9?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/github/license/caspel26/shimwire?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/shimwire?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+
+<img src="https://raw.githubusercontent.com/caspel26/shimwire/main/assets/terminal-demo.gif" alt="shimwire terminal demo" width="100%" />
+
 <!-- ============ CURRENTLY ============ -->
 ### Currently
 
@@ -51,7 +74,7 @@ pip install django-ninja-aio-crud
 
 **Backend**
 
-<img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" /> <img src="https://img.shields.io/badge/Django%20Ninja-black?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Gin-00ADD8?style=flat-square&logo=gin&logoColor=white" /> <img src="https://img.shields.io/badge/Echo-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/Huma-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/GORM-00ADD8?style=flat-square&logo=go&logoColor=white" />
+<img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" /> <img src="https://img.shields.io/badge/Django%20Ninja-black?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Bun-000000?style=flat-square&logo=bun&logoColor=white" /> <img src="https://img.shields.io/badge/Gin-00ADD8?style=flat-square&logo=gin&logoColor=white" /> <img src="https://img.shields.io/badge/Echo-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/Huma-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/GORM-00ADD8?style=flat-square&logo=go&logoColor=white" />
 
 **Frontend**
 

@@ -51,10 +51,10 @@ One CLI for both sides of an API you don't fully control yet — mocks the parts
 [GitHub](https://github.com/caspel26/shimwire)
 
 ```
-git clone https://github.com/caspel26/shimwire && cd shimwire && bun install
+npm install -g shimwire
 ```
 
-<img src="https://github.com/caspel26/shimwire/actions/workflows/ci.yml/badge.svg" /> <img src="https://img.shields.io/badge/runtime-bun-1E1B4B?style=flat-square&logo=bun&logoColor=white" /> <img src="https://img.shields.io/badge/lang-TypeScript-6D28D9?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/github/license/caspel26/shimwire?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/shimwire?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+<img src="https://img.shields.io/npm/v/shimwire?style=flat-square&label=npm&labelColor=1E1B4B&color=6D28D9" /> <img src="https://github.com/caspel26/shimwire/actions/workflows/ci.yml/badge.svg" /> <img src="https://img.shields.io/badge/runtime-bun-1E1B4B?style=flat-square&logo=bun&logoColor=white" /> <img src="https://img.shields.io/badge/lang-TypeScript-6D28D9?style=flat-square&logo=typescript&logoColor=white" /> <img src="https://img.shields.io/github/license/caspel26/shimwire?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/shimwire?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
 <img src="https://raw.githubusercontent.com/caspel26/shimwire/main/assets/terminal-demo.gif" alt="shimwire terminal demo" width="100%" />
 

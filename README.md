@@ -13,14 +13,14 @@
 
 I build async, high-performance backend systems in Python — mostly Django and Django Ninja — and care as much about how a system is put together as about the code itself. Lately that includes wiring LLMs into real production backends rather than just prototyping with them. Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework built on top of Django Ninja.
 
-<img src="https://github-readme-tech-stack.vercel.app/api/cards?lineCount=5&theme=dracula&width=650&line1=,Software+Engineer+%40+Namirial+Group,auto;&line2=,Backend+systems+%C2%B7+REST+APIs+%C2%B7+Async+Python,auto;&line3=,Also+with%3A+Vue+%C2%B7+Node.js+%C2%B7+Go,auto;&line4=,Currently%3A+LLM+integration+%C2%B7+System+Design,auto;&line5=,peppe.c0126%40gmail.com,auto;" />
+<img src="https://img.shields.io/badge/Role-Software%20Engineer%20%40%20Namirial%20Group-6D28D9?style=plastic" />
+<img src="https://img.shields.io/badge/Focus-Backend%20%C2%B7%20REST%20APIs%20%C2%B7%20Async%20Python-4C1D95?style=plastic" />
+<img src="https://img.shields.io/badge/Also%20with-Vue%20%C2%B7%20Node.js%20%C2%B7%20Go-1E1B4B?style=plastic" />
+<img src="https://img.shields.io/badge/Currently-LLMs%20%C2%B7%20System%20Design-A78BFA?style=plastic" />
+<img src="https://img.shields.io/badge/Reach%20me-peppe.c0126%40gmail.com-6D28D9?style=plastic&logo=gmail&logoColor=white" />
 
 <!-- ============ FEATURED PROJECT ============ -->
 ### Featured Project
-
-<a href="https://github.com/caspel26/django-ninja-aio-crud">
-  <img src="https://github-readme-tech-stack.vercel.app/api/cards?title=django-ninja-aio-crud&titleAlign=center&fontSize=16&lineCount=1&theme=dracula&line1=python,Python,auto;django,Django,auto;&width=420" />
-</a>
 
 **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)** — an async CRUD framework built on [Django Ninja](https://django-ninja.dev/), providing automated REST API generation with async support, authentication, filtering, pagination, and serialization out of the box.
 
@@ -33,34 +33,24 @@ I build async, high-performance backend systems in Python — mostly Django and 
 <!-- ============ OTHER PROJECTS ============ -->
 ### Other Projects
 
-<a href="https://github.com/caspel26/ninja-aio-blog-example">
-  <img src="https://github-readme-tech-stack.vercel.app/api/cards?title=ninja-aio-blog-example&titleAlign=center&fontSize=15&lineCount=1&theme=dracula&line1=python,Python,auto;django,Django,auto;&width=420" />
-</a>
-<br/>
-<sub>Production-oriented example integrating django-ninja-aio-crud with JWT (RS256) authentication.</sub>
-
-<br/><br/>
-
-<a href="https://github.com/caspel26/ssh-manager">
-  <img src="https://github-readme-tech-stack.vercel.app/api/cards?title=ssh-manager&titleAlign=center&fontSize=15&lineCount=1&theme=dracula&line1=vuedotjs,Vue.js,auto;&width=420" />
-</a>
-<br/>
-<sub>A Vue-based SSH connection manager.</sub>
-
-<br/><br/>
-
-<a href="https://github.com/caspel26/password_manager">
-  <img src="https://github-readme-tech-stack.vercel.app/api/cards?title=password_manager&titleAlign=center&fontSize=15&lineCount=1&theme=dracula&line1=python,Python,auto;vuedotjs,Vue.js,auto;&width=420" />
-</a>
-<br/>
-<sub>A password manager that encrypts stored credentials with RSA keys.</sub>
+| Project | Description | Stack |
+|---|---|---|
+| **[ninja-aio-blog-example](https://github.com/caspel26/ninja-aio-blog-example)** | Production-oriented example integrating django-ninja-aio-crud with JWT (RS256) authentication | <img src="https://skillicons.dev/icons?i=python,django&theme=dark" height="32"/> |
+| **[ssh-manager](https://github.com/caspel26/ssh-manager)** | A Vue-based SSH connection manager | <img src="https://skillicons.dev/icons?i=vue&theme=dark" height="32"/> |
+| **[password_manager](https://github.com/caspel26/password_manager)** | A password manager that encrypts stored credentials with RSA keys | <img src="https://skillicons.dev/icons?i=python,vue&theme=dark" height="32"/> |
 
 <!-- ============ TECH STACK ============ -->
 ### Tech Stack
 
-<img src="https://github-readme-tech-stack.vercel.app/api/cards?align=center&lineCount=3&theme=dracula&line1=python,Python,auto;django,Django,auto;fastapi,FastAPI,auto;nodedotjs,Node.js,auto;go,Go,auto;vuedotjs,Vue.js,auto;&line2=postgresql,PostgreSQL,auto;redis,Redis,auto;docker,Docker,auto;githubactions,GitHub%20Actions,auto;git,Git,auto;pytest,Pytest,auto;&line3=anthropic,Anthropic,auto;langchain,LangChain,auto;&width=700" />
+**Languages, frameworks & infra**
 
-<sub>Also work with Django Ninja day to day — no icon for it on this card yet, but it's the base of <a href="https://github.com/caspel26/django-ninja-aio-crud">django-ninja-aio-crud</a>.</sub>
+<img src="https://skillicons.dev/icons?i=python,django,fastapi,nodejs,go,vue,postgres,redis,docker,git,githubactions,pytest&theme=dark" />
+
+**AI · LLM**
+
+<img src="https://skillicons.dev/icons?i=anthropic,langchain&theme=dark" />
+
+<sub>Also work with Django Ninja day to day — no icon for it yet, but it's the base of <a href="https://github.com/caspel26/django-ninja-aio-crud">django-ninja-aio-crud</a>.</sub>
 
 <!-- ============ GITHUB STATS ============ -->
 ### GitHub Stats

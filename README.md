@@ -25,6 +25,7 @@ Async dynamic CRUD framework for Django Ninja.
 - 🔎 Filtering & pagination
 - 🧩 Dynamic model CRUD
 - 📦 Automatic serialization
+- 🤖 MCP server for AI agents — expose ViewSets as tools any MCP client can call directly, zero glue code
 - 🐍 Django + Django Ninja
 
 [Documentation](https://django-ninja-aio.com) · [PyPI](https://pypi.org/project/django-ninja-aio-crud/) · [GitHub](https://github.com/caspel26/django-ninja-aio-crud)

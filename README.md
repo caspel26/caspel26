@@ -49,6 +49,7 @@ One CLI for both sides of an API you don't fully control yet — mocks the parts
 - 🎯 Overrides for status/latency/exact-body edge-case testing
 - 🖱️ Guided interactive menu, or full CI-friendly flags
 - 📊 HTML reports and `--fail-on-error` for CI
+- 🤖 MCP server — an AI agent can inspect a spec, scaffold a project, and verify it actually works, without knowing shimwire's flags
 
 [GitHub](https://github.com/caspel26/shimwire)
 

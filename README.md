@@ -84,41 +84,7 @@ codium --install-extension caspel26.lilac-nights
 
 Previews — pick a language:
 
-<details>
-<summary><b>Python</b></summary>
-<br>
-<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-python.png" alt="Lilac Nights in Python" width="100%" />
-</details>
-
-<details>
-<summary><b>TypeScript</b></summary>
-<br>
-<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-typescript.png" alt="Lilac Nights in TypeScript" width="100%" />
-</details>
-
-<details>
-<summary><b>JavaScript</b></summary>
-<br>
-<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-javascript.png" alt="Lilac Nights in JavaScript" width="100%" />
-</details>
-
-<details>
-<summary><b>Go</b></summary>
-<br>
-<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-go.png" alt="Lilac Nights in Go" width="100%" />
-</details>
-
-<details>
-<summary><b>Rust</b></summary>
-<br>
-<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-rust.png" alt="Lilac Nights in Rust" width="100%" />
-</details>
-
-<details>
-<summary><b>C++</b></summary>
-<br>
-<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-cpp.png" alt="Lilac Nights in C++" width="100%" />
-</details>
+<a href="https://github.com/caspel26/lilac-nights/blob/main/images/preview-python.png"><img src="https://img.shields.io/badge/Python-1E1B4B?style=flat-square&logo=python&logoColor=A78BFA" /></a> <a href="https://github.com/caspel26/lilac-nights/blob/main/images/preview-typescript.png"><img src="https://img.shields.io/badge/TypeScript-1E1B4B?style=flat-square&logo=typescript&logoColor=A78BFA" /></a> <a href="https://github.com/caspel26/lilac-nights/blob/main/images/preview-javascript.png"><img src="https://img.shields.io/badge/JavaScript-1E1B4B?style=flat-square&logo=javascript&logoColor=A78BFA" /></a> <a href="https://github.com/caspel26/lilac-nights/blob/main/images/preview-go.png"><img src="https://img.shields.io/badge/Go-1E1B4B?style=flat-square&logo=go&logoColor=A78BFA" /></a> <a href="https://github.com/caspel26/lilac-nights/blob/main/images/preview-rust.png"><img src="https://img.shields.io/badge/Rust-1E1B4B?style=flat-square&logo=rust&logoColor=A78BFA" /></a> <a href="https://github.com/caspel26/lilac-nights/blob/main/images/preview-cpp.png"><img src="https://img.shields.io/badge/C%2B%2B-1E1B4B?style=flat-square&logo=cplusplus&logoColor=A78BFA" /></a>
 
 <!-- ============ CURRENTLY ============ -->
 ### Currently

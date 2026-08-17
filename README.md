@@ -82,7 +82,7 @@ codium --install-extension caspel26.lilac-nights
 
 <img src="https://img.shields.io/open-vsx/v/caspel26/lilac-nights?style=flat-square&label=open%20vsx&labelColor=1E1B4B&color=6D28D9" /> <img src="https://img.shields.io/open-vsx/dt/caspel26/lilac-nights?style=flat-square&label=downloads&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/badge/theme-dark-1E1B4B?style=flat-square" /> <img src="https://img.shields.io/github/license/caspel26/lilac-nights?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/lilac-nights?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
-<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview.png" alt="Lilac Nights previewing a Django model" width="100%" />
+<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-python.png" alt="Lilac Nights color theme preview" width="100%" />
 
 <!-- ============ CURRENTLY ============ -->
 ### Currently

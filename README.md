@@ -62,6 +62,28 @@ npm install -g shimwire
 
 <img src="https://raw.githubusercontent.com/caspel26/shimwire/main/assets/terminal-demo.gif" alt="shimwire terminal demo" width="100%" />
 
+<br>
+
+#### [lilac-nights](https://github.com/caspel26/lilac-nights)
+
+A dark VS Code theme with a lilac spine — built to be read for eight hours straight.
+
+- 🟣 Purple carries the structure — keywords, properties, decorators
+- 🎨 Every other hue has exactly one job, so nothing looks alike by accident
+- 🔍 Semantic-token aware, down to `variable.classMember` for Python attributes
+- ♿ Every syntax color clears WCAG AA against the editor background
+- 🖥️ Full workbench, terminal ANSI, diff, debug and notebook coverage
+
+[Open VSX](https://open-vsx.org/extension/caspel26/lilac-nights) · [GitHub](https://github.com/caspel26/lilac-nights)
+
+```
+codium --install-extension caspel26.lilac-nights
+```
+
+<img src="https://img.shields.io/open-vsx/v/caspel26/lilac-nights?style=flat-square&label=open%20vsx&labelColor=1E1B4B&color=6D28D9" /> <img src="https://img.shields.io/open-vsx/dt/caspel26/lilac-nights?style=flat-square&label=downloads&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/badge/theme-dark-1E1B4B?style=flat-square" /> <img src="https://img.shields.io/github/license/caspel26/lilac-nights?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/lilac-nights?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+
+<img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview.png" alt="Lilac Nights previewing a Django model" width="100%" />
+
 <!-- ============ CURRENTLY ============ -->
 ### Currently
 

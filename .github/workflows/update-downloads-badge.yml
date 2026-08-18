@@ -1,0 +1,60 @@
+name: Update Downloads Badge
+
+on:
+  schedule:
+    # Daily at 06:00 UTC
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch PyPI download stats and build badge JSON
+        run: |
+          python3 - <<'EOF'
+          import json
+          import urllib.request
+          import urllib.error
+
+          url = "https://pypistats.org/api/packages/django-ninja-aio-crud/recent"
+          message = "n/a"
+          try:
+              req = urllib.request.Request(url, headers={"User-Agent": "caspel26-profile-badge"})
+              with urllib.request.urlopen(req, timeout=15) as resp:
+                  data = json.load(resp)["data"]
+                  downloads = data["last_month"]
+                  message = f"{downloads:,}/month"
+          except (urllib.error.HTTPError, urllib.error.URLError, KeyError, TimeoutError) as exc:
+              print(f"Fetch failed, keeping previous badge value: {exc}")
+              try:
+                  with open("badges/downloads.json") as f:
+                      message = json.load(f)["message"]
+              except FileNotFoundError:
+                  pass
+
+          badge = {
+              "schemaVersion": 1,
+              "label": "downloads",
+              "message": message,
+              "color": "A78BFA",
+              "labelColor": "1E1B4B",
+          }
+
+          with open("badges/downloads.json", "w") as f:
+              json.dump(badge, f, indent=2)
+              f.write("\n")
+          EOF
+
+      - name: Commit badge if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add badges/downloads.json
+          git diff --staged --quiet || git commit -m "chore: update downloads badge"
+          git push

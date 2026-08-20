@@ -11,7 +11,7 @@
 
 Software engineer focused on high-performance async Python, Django/Django Ninja, and production LLM integrations.
 
-I build async CRUD frameworks and backend systems, then wire LLMs into them for real product workflows — not just prototypes. Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and I'm building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
+I build async CRUD frameworks and backend systems, then wire LLMs into them for real product workflows — not just prototypes. Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. I'm also building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
 
 <!-- ============ FEATURED PROJECTS ============ -->
 ### Featured Projects
@@ -37,6 +37,31 @@ pip install django-ninja-aio-crud
 <img src="https://img.shields.io/pypi/v/django-ninja-aio-crud?style=flat-square&label=pypi&labelColor=1E1B4B&color=6D28D9" /> <img src="https://img.shields.io/pypi/pyversions/django-ninja-aio-crud?style=flat-square&label=python&labelColor=1E1B4B&color=4C1D95" /> <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/caspel26/caspel26/main/badges/downloads.json&style=flat-square" /> <img src="https://img.shields.io/github/stars/caspel26/django-ninja-aio-crud?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
 
 <img src="https://raw.githubusercontent.com/caspel26/django-ninja-aio-crud/main/docs/images/quickstart-demo.gif" alt="django-ninja-aio-crud quick start demo" width="100%" />
+
+<br>
+
+#### [goninja](https://github.com/caspel26/goninja)
+
+Code-first CRUD REST APIs for Go, generated from annotated structs.
+
+- 🧬 Annotate a struct, run one command, get real `.go` files you commit
+- 🚫 Zero reflection on the request path — a bad tag fails `go build`, not production
+- 🧷 Output types are separate structs, so a field can't leak into a response
+- 🪢 No N+1 by construction — `list` never preloads, `retrieve` preloads what it carries
+- 🔎 Filters, range queries, ordering and limit/offset pagination
+- 🔐 `Authenticator` objects, per-route policy, reflected into the OpenAPI security schemes
+- 📘 OpenAPI 3.0 with Swagger UI and ReDoc embedded — no external CDN
+- 🐹 Plain `net/http` + GORM, no custom router
+
+[Documentation](https://goninja.dev) · [Changelog](https://goninja.dev/docs/changelog/) · [GitHub](https://github.com/caspel26/goninja)
+
+```
+go install github.com/caspel26/goninja/cmd/goninja@latest
+```
+
+<img src="https://img.shields.io/github/v/release/caspel26/goninja?style=flat-square&label=release&labelColor=1E1B4B&color=6D28D9" /> <img src="https://img.shields.io/badge/go-1.25%2B-1E1B4B?style=flat-square&logo=go&logoColor=A78BFA" /> <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/caspel26/goninja/main/coverage-badge.json&style=flat-square" /> <img src="https://img.shields.io/github/license/caspel26/goninja?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/goninja?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+
+<img src="https://raw.githubusercontent.com/caspel26/goninja/main/docs/demo/vscode-demo.gif" alt="goninja quick start demo" width="100%" />
 
 <br>
 

@@ -4,21 +4,52 @@
 
 <img src="assets/terminal.gif" alt="Terminal session: whoami, cat about.txt, ls projects/" width="100%" />
 
+<p>
+<sub>BACKEND · APIs · DEVELOPER TOOLS · AI-FIRST</sub><br>
+<a href="https://caspel26.github.io"><b>Portfolio</b></a> &nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/">LinkedIn</a> &nbsp;·&nbsp;
+<a href="https://github.com/caspel26?tab=repositories">Repositories</a>
+</p>
+
 </div>
 
 <!-- ============ ABOUT ============ -->
 ### About Me
 
-Software engineer focused on high-performance async Python, Django/Django Ninja, and production LLM integrations.
+Software engineer working with the Namirial Group in cybersecurity, in the PKI area. I like backend systems, APIs and developer tools, mostly in Python and Go, and I work AI-first: prompt engineering and agentic programming are part of how I build.
 
-I build async CRUD frameworks and backend systems, then wire LLMs into them for real product workflows — not just prototypes. Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. I'm also building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
+Outside work I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. I'm also building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
+
+The longer version, with every project, is on my **[portfolio](https://caspel26.github.io)**.
+
+<!-- ============ SELECTED WORK ============ -->
+### Selected Work
+
+| Project | What it is | Stack |
+| --- | --- | --- |
+| [django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud) | CRUD framework for Django Ninja, sync or async | Python |
+| [goninja](https://github.com/caspel26/goninja) | Code-first CRUD REST APIs for Go, generated from annotated structs | Go |
+| [Shiori](https://myshiori.eu) | Anime discovery and tracking product, in public beta | Go, PostgreSQL |
+| [shimwire](https://github.com/caspel26/shimwire) | Mock and test APIs from one OpenAPI spec | TypeScript, Bun |
+| [password_manager](https://github.com/caspel26/password_manager) | Desktop password manager with encrypted local vault files | Electron, Vue 3, TypeScript |
+| [mana-oly-tools](https://mana-oly-tools.pages.dev/) | Community calculators and trackers for Olympus Prison on ManaCube | TypeScript, Next.js, Tailwind |
+| [lilac-nights](https://github.com/caspel26/lilac-nights) | My dark VS Code theme | Theme |
+
+<!-- ============ CURRENTLY ============ -->
+### Currently
+
+- Building async CRUD/backend infrastructure in Python and Go
+- Integrating LLMs into production backends — tool calling, agentic workflows, structured outputs, RAG, async/streaming inference
+- Exploring system design and architecture patterns for async services
 
 <!-- ============ FEATURED PROJECTS ============ -->
-### Featured Projects
+### In Detail
 
-#### [django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)
+The projects I spend the most time on, expanded.
 
-Async dynamic CRUD framework for Django Ninja.
+<details>
+<summary><b>django-ninja-aio-crud</b> — async CRUD framework for Django Ninja</summary>
+
 
 - ⚡ Async-first API generation
 - 🔐 Built-in authentication
@@ -38,11 +69,12 @@ pip install django-ninja-aio-crud
 
 <img src="https://raw.githubusercontent.com/caspel26/django-ninja-aio-crud/main/docs/images/quickstart-demo.gif" alt="django-ninja-aio-crud quick start demo" width="100%" />
 
-<br>
+</details>
 
-#### [goninja](https://github.com/caspel26/goninja)
+<details>
+<summary><b>goninja</b> — code-first CRUD REST APIs for Go</summary>
 
-Code-first CRUD REST APIs for Go, generated from annotated structs.
+Generated from annotated structs.
 
 - 🧬 Annotate a struct, run one command, get real `.go` files you commit
 - 🚫 Zero reflection on the request path — a bad tag fails `go build`, not production
@@ -63,9 +95,10 @@ go install github.com/caspel26/goninja/cmd/goninja@latest
 
 <img src="https://raw.githubusercontent.com/caspel26/goninja/main/docs/demo/vscode-demo.gif" alt="goninja quick start demo" width="100%" />
 
-<br>
+</details>
 
-#### [shimwire](https://github.com/caspel26/shimwire)
+<details>
+<summary><b>shimwire</b> — mock and test an API from one OpenAPI spec</summary>
 
 One CLI for both sides of an API you don't fully control yet — mocks the parts that aren't built, and tests the parts that are, from a single OpenAPI/Swagger spec.
 
@@ -87,11 +120,12 @@ npm install -g shimwire
 
 <img src="https://raw.githubusercontent.com/caspel26/shimwire/main/assets/terminal-demo.gif" alt="shimwire terminal demo" width="100%" />
 
-<br>
+</details>
 
-#### [lilac-nights](https://github.com/caspel26/lilac-nights)
+<details>
+<summary><b>lilac-nights</b> — a dark VS Code theme with a lilac spine</summary>
 
-A dark VS Code theme with a lilac spine — built to be read for eight hours straight.
+Built to be read for eight hours straight.
 
 - 🟣 Purple carries the structure — keywords, properties, decorators
 - 🎨 Every other hue has exactly one job, so nothing looks alike by accident
@@ -145,12 +179,7 @@ Previews — click a language to open it here:
 <img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-cpp.png" alt="Lilac Nights in C++" width="100%" />
 </details>
 
-<!-- ============ CURRENTLY ============ -->
-### Currently
-
-- Building async CRUD/backend infrastructure in Python and Go
-- Integrating LLMs into production backends — tool calling, agentic workflows, structured outputs, RAG, async/streaming inference
-- Exploring system design and architecture patterns for async services
+</details>
 
 <!-- ============ STACK ============ -->
 ### Stack
@@ -164,6 +193,8 @@ Previews — click a language to open it here:
 <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" /> <img src="https://img.shields.io/badge/Django%20Ninja-black?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Bun-000000?style=flat-square&logo=bun&logoColor=white" /> <img src="https://img.shields.io/badge/Gin-00ADD8?style=flat-square&logo=gin&logoColor=white" /> <img src="https://img.shields.io/badge/Echo-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/Huma-00ADD8?style=flat-square" /> <img src="https://img.shields.io/badge/GORM-00ADD8?style=flat-square&logo=go&logoColor=white" />
 
 **Frontend**
+
+*Used in my projects, with AI assistance for the implementation.*
 
 <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Next.js-black?style=flat-square&logo=nextdotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" /> <img src="https://img.shields.io/badge/Framer%20Motion-black?style=flat-square&logo=framer&logoColor=white" />
 
@@ -191,11 +222,10 @@ Previews — click a language to open it here:
 #### Other Experiments
 
 - **[ssh-manager](https://github.com/caspel26/ssh-manager)** — a Vue-based SSH connection manager
-- **[password_manager](https://github.com/caspel26/password_manager)** — a password manager that encrypts stored credentials with RSA keys
 
 <!-- ============ CONNECT ============ -->
 ### Connect
 
-<a href="mailto:peppe.c0126@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
+<a href="https://caspel26.github.io"><img src="https://img.shields.io/badge/Portfolio-6D28D9?style=flat-square&logo=githubpages&logoColor=white" /></a> <a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a> <a href="mailto:peppe.c0126@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:c4b5fd,50:6d28d9,100:1e1b4b&height=100&section=footer" width="100%"/>

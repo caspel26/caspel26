@@ -24,7 +24,7 @@ caspel26 = {
 }
 ```
 
-Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. I'm also building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
+Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. I'm also building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec, and **[Hinoki](https://github.com/caspel26/hinoki)**, a typed Python API framework with a native Rust core (pre-alpha).
 
 <!-- ============ FEATURED PROJECTS ============ -->
 ### Featured Projects
@@ -102,6 +102,24 @@ npm install -g shimwire
 
 <br>
 
+#### [hinoki](https://github.com/caspel26/hinoki)
+
+Typed Python APIs with a native Rust core — plain Python on the surface, verifiable architecture underneath. **Pre-alpha**: a reference blog runs end to end, but APIs will change and nothing is on PyPI yet.
+
+- 🐍 Plain, fully typed Python — `@get`/`@post` on functions or classes, sync or async
+- 🧱 Independent framework: not built on Django, FastAPI, Starlette or Pydantic
+- 🦀 Rust core (PyO3) for routing, request handling and the PostgreSQL ORM engine
+- 🔐 Public by default, protected on purpose — reusable `Access` policies and `Principal[T]`
+- 🗄️ Active Record models, generated CRUD and inspectable SQL migrations that never run at startup
+- 📘 OpenAPI 3.1 from the same declarations
+- 🤖 Planned: a development MCP server exposing the live registry and optional architecture rules
+
+[GitHub](https://github.com/caspel26/hinoki)
+
+<img src="https://github.com/caspel26/hinoki/actions/workflows/ci.yml/badge.svg" /> <img src="https://img.shields.io/badge/python-3.12%2B-1E1B4B?style=flat-square&logo=python&logoColor=A78BFA" /> <img src="https://img.shields.io/badge/core-Rust%20%2B%20PyO3-1E1B4B?style=flat-square&logo=rust&logoColor=A78BFA" /> <img src="https://img.shields.io/badge/status-pre--alpha-6D28D9?style=flat-square" /> <img src="https://img.shields.io/github/license/caspel26/hinoki?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/hinoki?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
+
+<br>
+
 #### [lilac-nights](https://github.com/caspel26/lilac-nights)
 
 A dark VS Code theme with a lilac spine — built to be read for eight hours straight.
@@ -162,6 +180,7 @@ Previews — click a language to open it here:
 ### Currently
 
 - Building async CRUD/backend infrastructure in Python and Go
+- Designing Hinoki, a typed Python API framework with a Rust core
 - Integrating LLMs into production backends — tool calling, agentic workflows, structured outputs, RAG, async/streaming inference
 - Exploring system design and architecture patterns for async services
 

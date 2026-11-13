@@ -102,22 +102,19 @@ npm install -g shimwire
 
 <br>
 
-#### [hinoki](https://github.com/caspel26/hinoki)
+#### [Hinoki](https://github.com/caspel26/hinoki)
 
-Typed Python APIs with a native Rust core — plain Python on the surface, verifiable architecture underneath. **Pre-alpha**: a reference blog runs end to end, but APIs will change and nothing is on PyPI yet.
+A pre-alpha Python API framework with typed endpoints, explicit application lifecycles and optional architecture rules.
 
-- 🐍 Plain, fully typed Python — `@get`/`@post` on functions or classes, sync or async
-- 🧱 Independent framework: not built on Django, FastAPI, Starlette or Pydantic
-- 🦀 Rust core (PyO3) for routing, request handling and the PostgreSQL ORM engine
-- 🔐 Public by default, protected on purpose — reusable `Access` policies and `Principal[T]`
-- 🗄️ Active Record models, generated CRUD and inspectable SQL migrations that never run at startup
-- 📘 OpenAPI 3.1 from the same declarations
-- 🤖 Planned: a development MCP server exposing the live registry and optional architecture rules
+- 🐍 Function and class APIs, sync or async, with reusable access policies and declared errors
+- 🧭 `hinoki check` checks architectural rules and reports actionable diagnostics
+- 🗄️ PostgreSQL ORM, inspectable migrations and per-worker connection pools
+- 🦀 Rust-backed request, schema, cryptography and ORM paths
+- 🧰 Development and application MCP tools, plus an optional admin with three styles
 
-[GitHub](https://github.com/caspel26/hinoki)
+[Source and examples](https://github.com/caspel26/hinoki) · [Getting started](https://github.com/caspel26/hinoki/blob/main/docs/getting-started.md) · [Model options](https://github.com/caspel26/hinoki/blob/main/docs/MODEL-OPTIONS.md)
 
-<img src="https://github.com/caspel26/hinoki/actions/workflows/ci.yml/badge.svg" /> <img src="https://img.shields.io/badge/python-3.12%2B-1E1B4B?style=flat-square&logo=python&logoColor=A78BFA" /> <img src="https://img.shields.io/badge/core-Rust%20%2B%20PyO3-1E1B4B?style=flat-square&logo=rust&logoColor=A78BFA" /> <img src="https://img.shields.io/badge/status-pre--alpha-6D28D9?style=flat-square" /> <img src="https://img.shields.io/github/license/caspel26/hinoki?style=flat-square&labelColor=1E1B4B&color=A78BFA" /> <img src="https://img.shields.io/github/stars/caspel26/hinoki?style=flat-square&label=stars&labelColor=1E1B4B&color=6D28D9" />
-
+<img src="https://github.com/caspel26/hinoki/actions/workflows/ci.yml/badge.svg" alt="CI" /> <img src="https://img.shields.io/badge/python-3.12%2B-1E1B4B?style=flat-square&logo=python&logoColor=A78BFA" alt="Python 3.12+" /> <img src="https://img.shields.io/badge/status-pre--alpha-6D28D9?style=flat-square" alt="Pre-alpha" /> <img src="https://img.shields.io/github/license/caspel26/hinoki?style=flat-square&labelColor=1E1B4B&color=A78BFA" alt="MIT license" />
 <br>
 
 #### [lilac-nights](https://github.com/caspel26/lilac-nights)

@@ -24,10 +24,80 @@ caspel26 = {
 }
 ```
 
-Outside the day job, I maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. I'm also building **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec, and **[Hinoki](https://github.com/caspel26/hinoki)**, a typed Python API framework with a native Rust core (pre-alpha).
+Outside the day job, I'm building **[Hinoki](https://caspel26.github.io/hinoki/)**, a typed Python API framework with a Rust core and architecture rules you can check (pre-alpha, below). I also maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. And **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
+
+<!-- ============ HINOKI ============ -->
+<div align="center">
+
+<a href="https://caspel26.github.io/hinoki/">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/lockup-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/lockup-light.svg">
+    <img src="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/lockup-light.svg" alt="Hinoki" width="340">
+  </picture>
+</a>
+
+### Python APIs with architecture you can check.
+
+Handlers in Python, a core in Rust. What I am building right now.
+
+<a href="https://github.com/caspel26/hinoki/actions/workflows/ci.yml"><img alt="CI" src="https://img.shields.io/github/actions/workflow/status/caspel26/hinoki/ci.yml?branch=main&label=CI&labelColor=1d1a24"></a>
+<a href="https://codecov.io/gh/caspel26/hinoki"><img alt="Coverage" src="https://codecov.io/gh/caspel26/hinoki/branch/main/graph/badge.svg?labelColor=1d1a24"></a>
+<img alt="Python 3.12, 3.13 and 3.14" src="https://img.shields.io/badge/python-3.12%20%7C%203.13%20%7C%203.14-7a55c4?labelColor=1d1a24">
+<a href="https://caspel26.github.io/hinoki/dev/status/"><img alt="Status: pre-alpha" src="https://img.shields.io/badge/status-pre--alpha-e3c29b?labelColor=1d1a24"></a>
+<a href="https://github.com/caspel26/hinoki/blob/main/LICENSE"><img alt="MIT license" src="https://img.shields.io/badge/license-MIT-7a55c4?labelColor=1d1a24"></a>
+
+<a href="https://caspel26.github.io/hinoki/"><strong>Documentation</strong></a> ·
+<a href="https://caspel26.github.io/hinoki/dev/quick-start/">Quick start</a> ·
+<a href="https://caspel26.github.io/hinoki/dev/tutorial/">Tutorial</a> ·
+<a href="https://github.com/caspel26/hinoki/tree/main/examples">Examples</a> ·
+<a href="https://github.com/caspel26/hinoki">Source</a>
+
+</div>
+
+An endpoint declares its types, who may call it, whether it runs in a transaction and which errors it returns. That one declaration drives routing, validation, the OpenAPI document and the optional rules that `hinoki check` runs against your source — so the architecture of the app is something you can verify, not something you remember.
+
+```python
+@http.post("/notes", status=201, transaction=True)
+async def create(data: NoteIn) -> NoteOut:
+    return NoteOut.from_model(await Note.acreate(data))
+```
+
+Invalid input is answered `422` before the handler runs, with a stable error body:
+
+```json
+{"error": "validation_error", "request_id": "…", "details": [{"path": "data.title", "code": "min_length", "message": "at least 1 character"}]}
+```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/check.svg" width="760" alt="hinoki check reports three rule violations, each with its file and line, a rule ID and a fix, then a summary: 2 rules, 3 violated">
+</p>
+
+<table>
+  <tr>
+    <td width="33%" valign="top"><strong>Declared</strong><br>Access, transactions and errors are options of the decorator or defaults of a route group, and they land in OpenAPI.</td>
+    <td width="33%" valign="top"><strong>Checked</strong><br>Five optional rules: access, transactions, model responses, exposed fields, imports. Every finding has a file, a line and a fix.</td>
+    <td width="33%" valign="top"><strong>Strict</strong><br>Input is validated without coercion and unknown fields are refused. A response carries only what its <code>Schema</code> names.</td>
+  </tr>
+  <tr>
+    <td valign="top"><strong>Explicit</strong><br>Nothing connects at import. Tables change only through SQL migration files you review and apply.</td>
+    <td valign="top"><strong>Rust core</strong><br>Path matching, schema validation and serialization, cryptography and database execution run in a compiled extension. Handlers stay Python, sync or async.</td>
+    <td valign="top"><strong>Included</strong><br>ORM for PostgreSQL, SQLite, MySQL and MariaDB, generated CRUD, typed settings, test clients, MCP tools and an optional admin.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="50%" align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/caspel26/hinoki/main/docs/screenshots/admin-studio-list-dark.png"><img src="https://raw.githubusercontent.com/caspel26/hinoki/main/docs/screenshots/admin-studio-list-light.png" alt="Hinoki admin, Studio style: a list of blog posts with search and filters"></picture><br><sub>Admin · Studio</sub></td>
+    <td width="50%" align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/caspel26/hinoki/main/docs/screenshots/admin-console-list-dark.png"><img src="https://raw.githubusercontent.com/caspel26/hinoki/main/docs/screenshots/admin-console-list-light.png" alt="Hinoki admin, Console style: a dense list of blog posts"></picture><br><sub>Admin · Console</sub></td>
+  </tr>
+</table>
+
+> [!NOTE]
+> Hinoki is **pre-alpha and not released**: the API and the migration format may change, and I make no performance claims. Try it from a source checkout, with disposable data: `git clone https://github.com/caspel26/hinoki`, then follow the [quick start](https://caspel26.github.io/hinoki/dev/quick-start/).
 
 <!-- ============ FEATURED PROJECTS ============ -->
-### Featured Projects
+### More projects
 
 #### [django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)
 
@@ -102,21 +172,6 @@ npm install -g shimwire
 
 <br>
 
-#### [Hinoki](https://github.com/caspel26/hinoki)
-
-A pre-alpha Python API framework with typed endpoints, explicit application lifecycles and optional architecture rules.
-
-- 🐍 Function and class APIs, sync or async, with reusable access policies and declared errors
-- 🧭 `hinoki check` checks architectural rules and reports actionable diagnostics
-- 🗄️ PostgreSQL ORM, inspectable migrations and per-worker connection pools
-- 🦀 Rust-backed request, schema, cryptography and ORM paths
-- 🧰 Development and application MCP tools, plus an optional admin with three styles
-
-[Source and examples](https://github.com/caspel26/hinoki) · [Getting started](https://github.com/caspel26/hinoki/blob/main/docs/getting-started.md) · [Model options](https://github.com/caspel26/hinoki/blob/main/docs/MODEL-OPTIONS.md)
-
-<img src="https://github.com/caspel26/hinoki/actions/workflows/ci.yml/badge.svg" alt="CI" /> <img src="https://img.shields.io/badge/python-3.12%2B-1E1B4B?style=flat-square&logo=python&logoColor=A78BFA" alt="Python 3.12+" /> <img src="https://img.shields.io/badge/status-pre--alpha-6D28D9?style=flat-square" alt="Pre-alpha" /> <img src="https://img.shields.io/github/license/caspel26/hinoki?style=flat-square&labelColor=1E1B4B&color=A78BFA" alt="MIT license" />
-<br>
-
 #### [lilac-nights](https://github.com/caspel26/lilac-nights)
 
 A dark VS Code theme with a lilac spine — built to be read for eight hours straight.
@@ -177,7 +232,7 @@ Previews — click a language to open it here:
 ### Currently
 
 - Building async CRUD/backend infrastructure in Python and Go
-- Designing Hinoki, a typed Python API framework with a Rust core
+- Building **[Hinoki](https://caspel26.github.io/hinoki/)**, a typed Python API framework with a Rust core: moving more of the request path into the native core, with a design written down before each step
 - Integrating LLMs into production backends — tool calling, agentic workflows, structured outputs, RAG, async/streaming inference
 - Exploring system design and architecture patterns for async services
 

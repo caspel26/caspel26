@@ -20,7 +20,7 @@ caspel26 = {
     "likes":     ["backend", "APIs", "developer tools"],
     "practice":  "AI-first · agentic programming",
     "editor":    "Lilac Nights, obviously",
-    "portfolio": "https://caspel26.github.io",
+    "portfolio": "https://caspel.dev",
 }
 ```
 
@@ -282,6 +282,6 @@ Previews — click a language to open it here:
 <!-- ============ CONNECT ============ -->
 ### Connect
 
-<a href="https://caspel26.github.io"><img src="https://img.shields.io/badge/Portfolio-6D28D9?style=flat-square&logo=githubpages&logoColor=white" /></a> <a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a> <a href="mailto:peppe.c0126@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
+<a href="https://caspel26.github.io"><img src="https://img.shields.io/badge/Portfolio-6D28D9?style=flat-square&logo=githubpages&logoColor=white" /></a> <a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a> <a href="mailto:giuseppe@caspel.dev"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:c4b5fd,50:6d28d9,100:1e1b4b&height=100&section=footer" width="100%"/>

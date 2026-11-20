@@ -4,7 +4,7 @@
 
 <img src="assets/terminal.gif" alt="Terminal session: whoami, cat about.txt, ls projects/" width="100%" />
 
-<a href="https://caspel26.github.io"><img src="https://img.shields.io/badge/caspel26.github.io-portfolio-1E1B4B?style=for-the-badge&labelColor=6D28D9" alt="Portfolio" /></a>
+<a href="https://caspel.dev"><img src="https://img.shields.io/badge/caspel.dev-portfolio-1E1B4B?style=for-the-badge&labelColor=6D28D9" alt="Portfolio" /></a>
 
 </div>
 

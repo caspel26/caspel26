@@ -70,21 +70,18 @@ Invalid input is answered `422` before the handler runs, with a stable error bod
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/demo.gif" width="760" alt="In a terminal, hinoki check reports that POST /notes does not declare atomic=True; after the fix it reports no violated rules, and hinoki dev serves the API on Kiso, Hinoki's own Rust server.">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/demo.png">
+    <img src="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/demo.gif" width="760" alt="In a terminal window, hinoki new asks for a project name, a database, a server and the rest, then creates an app named posts. hinoki check reports no violated rules, hinoki dev starts the Kiso server, and a curl request to POST /posts returns 201 Created with the new post.">
+  </picture>
 </p>
 
-<table>
-  <tr>
-    <td width="33%" valign="top"><strong>Declared</strong><br>Access, transactions and errors are options of the decorator or defaults of a route group, and they land in OpenAPI.</td>
-    <td width="33%" valign="top"><strong>Checked</strong><br>Eleven built-in rules (access, permissions, transactions, exposed fields, imports and more); a new project turns on eight. Every finding has a file, a line and a fix.</td>
-    <td width="33%" valign="top"><strong>Strict</strong><br>Input is validated without coercion and unknown fields are refused. A response carries only what its <code>Schema</code> names.</td>
-  </tr>
-  <tr>
-    <td valign="top"><strong>Explicit</strong><br>Nothing connects at import. Tables change only through SQL migration files you review and apply.</td>
-    <td valign="top"><strong>Rust core</strong><br>Path matching, schema validation, cryptography and database execution run in a compiled extension, and apps run on Kiso, Hinoki's own Rust HTTP server (Granian is optional). Handlers stay Python, sync or async.</td>
-    <td valign="top"><strong>Included</strong><br>ORM for PostgreSQL, SQLite, MySQL and MariaDB, generated CRUD, typed settings, test clients, MCP tools and an optional admin.</td>
-  </tr>
-</table>
+- **Declared** — access, transactions and errors are options of the decorator or defaults of a route group, and they land in OpenAPI.
+- **Checked** — eleven built-in rules (access, permissions, transactions, exposed fields, imports and more); a new project turns on eight. Every finding has a file, a line and a fix.
+- **Strict** — input is validated without coercion and unknown fields are refused. A response carries only what its `Schema` names.
+- **Explicit** — nothing connects at import. Tables change only through SQL migration files you review and apply.
+- **Rust core** — path matching, schema validation, cryptography and database execution run in a compiled extension, and apps run on Kiso, Hinoki's own Rust HTTP server (Granian is optional). Handlers stay Python, sync or async.
+- **Included** — typed schemas and settings, generated OpenAPI, an ORM for PostgreSQL, SQLite, MySQL and MariaDB, generated CRUD, test clients, MCP tools and an optional admin.
 
 <table>
   <tr>

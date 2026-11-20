@@ -72,7 +72,7 @@ Invalid input is answered `422` before the handler runs, with a stable error bod
 <p align="center">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/demo.png">
-    <img src="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/demo.gif" width="760" alt="In a terminal window, hinoki new asks for a project name, a database, a server and the rest, then creates an app named posts. hinoki check reports no violated rules, hinoki dev starts the Kiso server, and a curl request to POST /posts returns 201 Created with the new post.">
+    <img src="https://raw.githubusercontent.com/caspel26/hinoki/main/assets/readme/demo.apng" width="760" alt="In a terminal window, hinoki new asks for a project name, a database, a server and the rest, then creates an app named posts. hinoki check reports no violated rules, hinoki dev starts the Kiso server, a curl request to POST /posts returns 201 Created with the new post, and a request to the docs URL returns 200.">
   </picture>
 </p>
 

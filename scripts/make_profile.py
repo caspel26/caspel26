@@ -94,27 +94,18 @@ text{{font-family:{SANS}}}
 .b1{{animation:drift1 14s ease-in-out infinite alternate}}
 .b2{{animation:drift2 17s ease-in-out infinite alternate}}
 .b3{{animation:drift1 19s ease-in-out infinite alternate-reverse}}
-.ring{{fill:none;stroke:{c['accent']};stroke-opacity:.16;stroke-width:1.5}}
-.spin{{transform-origin:1010px 150px;animation:spin 90s linear infinite}}
 .sweep{{transform-box:fill-box;transform-origin:left;animation:sweep 5s ease-in-out infinite alternate}}
 @keyframes role{{0%{{opacity:0;transform:translateY(8px)}}4%,22%{{opacity:1;transform:none}}26%,100%{{opacity:0;transform:translateY(-6px)}}}}
 @keyframes drift1{{to{{transform:translate(120px,40px)}}}}
 @keyframes drift2{{to{{transform:translate(-140px,-30px)}}}}
-@keyframes spin{{to{{transform:rotate(360deg)}}}}
 @keyframes sweep{{from{{transform:scaleX(.25)}}to{{transform:scaleX(1)}}}}
-@media (prefers-reduced-motion:reduce){{.role,.b1,.b2,.b3,.spin,.sweep{{animation:none}}.role:first-of-type{{opacity:1}}}}
+@media (prefers-reduced-motion:reduce){{.role,.b1,.b2,.b3,.sweep{{animation:none}}.role:first-of-type{{opacity:1}}}}
 </style>
 <g clip-path="url(#clip)">
 <rect width="1200" height="300" fill="url(#bg)"/>
 <circle class="blob b1" cx="260" cy="60" r="150" fill="{c['violet']}"/>
 <circle class="blob b2" cx="900" cy="250" r="170" fill="{c['accent']}"/>
 <circle class="blob b3" cx="1080" cy="40" r="110" fill="{c['ochre']}"/>
-<g class="spin">
-<circle class="ring" cx="1010" cy="150" r="40"/><circle class="ring" cx="1010" cy="150" r="72"/>
-<circle class="ring" cx="1010" cy="150" r="104"/><circle class="ring" cx="1010" cy="150" r="136"/>
-<circle class="ring" cx="1010" cy="150" r="168"/><circle class="ring" cx="1010" cy="150" r="200"/>
-<path class="ring" d="M1010 150 L1210 150" stroke-opacity=".28"/>
-</g>
 <text class="hi" x="80" y="120">Hi, I'm Giuseppe</text>
 <text class="sub" x="80" y="164">Backend engineer · building Hinoki, goninja and django-ninja-aio-crud</text>
 {roles}

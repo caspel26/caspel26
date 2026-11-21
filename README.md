@@ -263,8 +263,8 @@ Previews — click a language to open it here:
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=2">
-  <img src="assets/stack-light.svg?v=2" alt="Languages: Python, Go, TypeScript, JavaScript, Rust, SQL. Backend and frontend: Django, DRF, FastAPI, Django Ninja, Gin, Echo, Huma, GORM, Node.js, Bun, Vue, Next.js, Tailwind CSS. Data and delivery: PostgreSQL, MySQL, SQLite, Redis, Docker, Linux, Nginx, HAProxy, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS. Testing and AI: Pytest, Playwright, Anthropic, OpenAI, Gemini, Perplexity." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=3">
+  <img src="assets/stack-light.svg?v=3" alt="Languages: Python, Go, TypeScript, JavaScript, Rust, SQL. Backend and frontend: Django, DRF, FastAPI, Django Ninja, Gin, Echo, Huma, GORM, Node.js, Bun, Vue, Next.js, Tailwind CSS. Data and delivery: PostgreSQL, MySQL, SQLite, Redis, Docker, Linux, Nginx, HAProxy, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS. Testing and AI: Pytest, Playwright, Anthropic, OpenAI, Gemini, Perplexity." width="100%">
 </picture>
 </div>
 

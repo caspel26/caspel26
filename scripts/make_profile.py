@@ -16,7 +16,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 OUT = Path(__file__).resolve().parent.parent / "assets"
-# Glyph paths (24x24) extracted from simple-icons, CC0. Names without a glyph get a lettered dot.
+# Glyph paths (24x24) extracted from simple-icons, CC0. Names without a glyph get a text-only pill.
 BRAND_ICONS: dict[str, str] = json.loads((Path(__file__).with_name("brand_icons.json")).read_text())
 CONNECT = ["Portfolio", "LinkedIn", "Email", "GitHub"]
 SANS = "system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
@@ -192,14 +192,19 @@ def glyph(name: str, x: float, y: float, c: dict) -> str:
     )
 
 
+def has_glyph(name: str) -> bool:
+    return name in ("Portfolio", "LinkedIn") or name in BRAND_ICONS
+
+
 def pill_row(names: list[str], c: dict) -> tuple[str, int]:
     pills, x = [], 0
     for name in names:
-        w = len(name) * 7.7 + 54
+        icon = has_glyph(name)
+        w = len(name) * 7.7 + (54 if icon else 38)
         pills.append(
             f'<rect x="{x:.0f}" y="0" width="{w:.0f}" height="38" rx="19" fill="{c["chip"]}" stroke="{c["edge"]}"/>'
-            f'{glyph(name, x + 14, 11, c)}'
-            f'<text class="pill" x="{x + 38}" y="24.5">{escape(name)}</text>'
+            f'{glyph(name, x + 14, 11, c) if icon else ""}'
+            f'<text class="pill" x="{x + (38 if icon else 19):.0f}" y="24.5">{escape(name)}</text>'
         )
         x += w + 10
     return "".join(pills), int(x)

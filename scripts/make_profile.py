@@ -11,10 +11,14 @@ animation is used: no scripts, no external fonts, no network.
 
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from xml.sax.saxutils import escape
 
 OUT = Path(__file__).resolve().parent.parent / "assets"
+# Glyph paths (24x24) extracted from simple-icons, CC0. Names without a glyph get a lettered dot.
+BRAND_ICONS: dict[str, str] = json.loads((Path(__file__).with_name("brand_icons.json")).read_text())
+CONNECT = ["Portfolio", "LinkedIn", "Email", "GitHub"]
 SANS = "system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
@@ -74,7 +78,7 @@ def header(theme: str, c: dict) -> str:
         f'<text class="role" style="animation-delay:{i * 3}s" x="80" y="214">{escape(r)}</text>'
         for i, r in enumerate(ROLES)
     )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Hi, I'm Giuseppe. Software Engineer at Namirial Group">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Hi, I'm Giuseppe. Backend engineer: frameworks, APIs and developer tools.">
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c['bg2']}"/><stop offset="1" stop-color="{c['bg']}"/></linearGradient>
 <linearGradient id="rule" x1="0" x2="1"><stop offset="0" stop-color="{c['violet']}"/><stop offset=".5" stop-color="{c['accent']}"/><stop offset="1" stop-color="{c['ochre']}"/></linearGradient>
@@ -112,7 +116,7 @@ text{{font-family:{SANS}}}
 <path class="ring" d="M1010 150 L1210 150" stroke-opacity=".28"/>
 </g>
 <text class="hi" x="80" y="120">Hi, I'm Giuseppe</text>
-<text class="sub" x="80" y="164">Software Engineer @ Namirial Group</text>
+<text class="sub" x="80" y="164">Backend engineer · building Hinoki, goninja and django-ninja-aio-crud</text>
 {roles}
 <rect class="sweep" x="80" y="240" width="220" height="3" rx="1.5" fill="url(#rule)"/>
 </g>
@@ -169,13 +173,25 @@ text{{font-family:{SANS}}}
 """
 
 
+def glyph(name: str, x: float, y: float, c: dict) -> str:
+    """A 16px brand glyph from simple-icons (CC0), or a lettered dot when there is none."""
+    path = BRAND_ICONS.get(name)
+    if path:
+        return f'<path transform="translate({x:.0f} {y:.0f}) scale(.667)" fill="{c["accent"]}" d="{path}"/>'
+    return (
+        f'<circle cx="{x + 8:.0f}" cy="{y + 8:.0f}" r="8" fill="none" stroke="{c["accent"]}" stroke-width="1.5"/>'
+        f'<text class="mono" x="{x + 8:.0f}" y="{y + 11.5:.0f}" text-anchor="middle" fill="{c["accent"]}">{escape(name[0])}</text>'
+    )
+
+
 def pill_row(names: list[str], c: dict) -> tuple[str, int]:
     pills, x = [], 0
     for name in names:
-        w = len(name) * 8.4 + 30
+        w = len(name) * 7.7 + 54
         pills.append(
-            f'<rect x="{x:.0f}" y="0" width="{w:.0f}" height="34" rx="17" fill="{c["chip"]}" stroke="{c["edge"]}"/>'
-            f'<text class="pill" x="{x + w / 2:.0f}" y="22" text-anchor="middle">{escape(name)}</text>'
+            f'<rect x="{x:.0f}" y="0" width="{w:.0f}" height="38" rx="19" fill="{c["chip"]}" stroke="{c["edge"]}"/>'
+            f'{glyph(name, x + 14, 11, c)}'
+            f'<text class="pill" x="{x + 38}" y="24.5">{escape(name)}</text>'
         )
         x += w + 10
     return "".join(pills), int(x)
@@ -202,6 +218,7 @@ def stack(theme: str, c: dict) -> str:
 <style>
 .label{{font-family:{MONO};font-size:11px;font-weight:600;letter-spacing:1.6px;fill:{c['muted']}}}
 .pill{{font-family:{SANS};font-size:14px;font-weight:600;fill:{c['text']}}}
+.mono{{font-family:{MONO};font-size:10px;font-weight:700}}
 .track{{animation-name:marquee;animation-timing-function:linear;animation-iteration-count:infinite}}
 @keyframes marquee{{to{{transform:translateX(var(--w))}}}}
 {''.join(rules)}
@@ -230,12 +247,28 @@ def footer(theme: str, c: dict) -> str:
 """
 
 
+def connect(label: str, c: dict) -> str:
+    w = int(len(label) * 8.2 + 62)
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} 44" width="{w}" height="44" role="img" aria-label="{label}">
+<style>
+.t{{font-family:{SANS};font-size:15px;font-weight:600;fill:{c['text']}}}
+.mono{{font-family:{MONO};font-size:11px;font-weight:700}}
+</style>
+<rect x=".75" y=".75" width="{w - 1.5}" height="42.5" rx="21.25" fill="{c['chip']}" stroke="{c['edge']}" stroke-width="1.5"/>
+{glyph(label, 20, 14, c)}
+<text class="t" x="46" y="28">{escape(label)}</text>
+</svg>
+"""
+
+
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for theme, c in THEMES.items():
         write("header", theme, header(theme, c))
         write("stack", theme, stack(theme, c))
         write("footer", theme, footer(theme, c))
+        for label in CONNECT:
+            write(f"connect-{label.lower()}", theme, connect(label, c))
         for i, project in enumerate(PROJECTS):
             write(f"card-{project[0].lower()}", theme, card(i, project, theme, c))
     print(f"wrote {len(list(OUT.glob('*.svg')))} SVGs to {OUT}")

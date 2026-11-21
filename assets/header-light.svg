@@ -15,15 +15,11 @@ text{font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-se
 .b2{animation:drift2 17s ease-in-out infinite alternate}
 .b3{animation:drift1 19s ease-in-out infinite alternate-reverse}
 .sweep{transform-box:fill-box;transform-origin:left;animation:sweep 5s ease-in-out infinite alternate}
-.fl{animation:bob 6s ease-in-out infinite alternate;animation-delay:inherit}
-.pn{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:15px;font-weight:600;fill:#1d1a24}
-.pt{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:11px;font-weight:600;letter-spacing:1px;fill:#625c85}
-@keyframes bob{from{transform:translateY(-5px)}to{transform:translateY(6px)}}
 @keyframes role{0%{opacity:0;transform:translateY(8px)}4%,22%{opacity:1;transform:none}26%,100%{opacity:0;transform:translateY(-6px)}}
 @keyframes drift1{to{transform:translate(120px,40px)}}
 @keyframes drift2{to{transform:translate(-140px,-30px)}}
 @keyframes sweep{from{transform:scaleX(.25)}to{transform:scaleX(1)}}
-@media (prefers-reduced-motion:reduce){.role,.b1,.b2,.b3,.sweep,.fl{animation:none}.role:first-of-type{opacity:1}}
+@media (prefers-reduced-motion:reduce){.role,.b1,.b2,.b3,.sweep{animation:none}.role:first-of-type{opacity:1}}
 </style>
 <g clip-path="url(#clip)">
 <rect width="1200" height="300" fill="url(#bg)"/>
@@ -34,7 +30,6 @@ text{font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-se
 <text class="sub" x="80" y="164">Software Engineer @ Namirial Group</text>
 <text class="role" style="animation-delay:0s" x="80" y="214">Backend · APIs · developer tools</text><text class="role" style="animation-delay:3s" x="80" y="214">Python · Go · TypeScript</text><text class="role" style="animation-delay:6s" x="80" y="214">AI-first · agentic programming</text><text class="role" style="animation-delay:9s" x="80" y="214">Building Hinoki: Python APIs with a Rust core</text>
 <rect class="sweep" x="80" y="240" width="220" height="3" rx="1.5" fill="url(#rule)"/>
-<g class="float" style="animation-delay:0.0s" transform="translate(770 44)"><g class="fl"><rect width="340" height="56" rx="14" fill="#ffffff" fill-opacity=".78" stroke="#ddd5f5" stroke-width="1.5"/><circle cx="26" cy="28" r="6" fill="#a8742f"/><text class="pn" x="46" y="34">hinoki</text><text class="pt" x="314" y="33" text-anchor="end">PYTHON · RUST</text></g></g><g class="float" style="animation-delay:-1.8s" transform="translate(806 122)"><g class="fl"><rect width="340" height="56" rx="14" fill="#ffffff" fill-opacity=".78" stroke="#ddd5f5" stroke-width="1.5"/><circle cx="26" cy="28" r="6" fill="#7a55c4"/><text class="pn" x="46" y="34">django-ninja-aio-crud</text><text class="pt" x="314" y="33" text-anchor="end">PYTHON</text></g></g><g class="float" style="animation-delay:-3.6s" transform="translate(770 200)"><g class="fl"><rect width="340" height="56" rx="14" fill="#ffffff" fill-opacity=".78" stroke="#ddd5f5" stroke-width="1.5"/><circle cx="26" cy="28" r="6" fill="#6d4fc2"/><text class="pn" x="46" y="34">goninja</text><text class="pt" x="314" y="33" text-anchor="end">GO</text></g></g>
 </g>
 <rect x=".75" y=".75" width="1198.5" height="298.5" rx="21.5" fill="none" stroke="#ddd5f5" stroke-width="1.5"/>
 </svg>

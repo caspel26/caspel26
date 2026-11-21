@@ -7,8 +7,6 @@
 
 <img src="assets/terminal.gif?v=2" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />
 
-<a href="https://caspel.dev"><img src="https://img.shields.io/badge/caspel.dev-portfolio-1E1B4B?style=for-the-badge&labelColor=6D28D9" alt="Portfolio" /></a>
-
 </div>
 
 <!-- ============ ABOUT ============ -->
@@ -16,16 +14,12 @@
 
 I write backend software for a living — cybersecurity and PKI with the Namirial Group — and frameworks, developer tools and small products for fun. Mostly Python and Go, almost always around APIs. I work AI-first: prompt engineering and agentic programming are part of how I design, build and test.
 
-```python
-caspel26 = {
-    "work":      "cybersecurity · PKI @ Namirial Group",
-    "languages": ["Python", "Go", "TypeScript"],
-    "likes":     ["backend", "APIs", "developer tools"],
-    "practice":  "AI-first · agentic programming",
-    "editor":    "Lilac Nights, obviously",
-    "portfolio": "https://caspel.dev",
-}
-```
+<p align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg?v=1">
+  <img src="assets/about-light.svg?v=1" alt="caspel26: work, cybersecurity and PKI at Namirial Group; languages Python, Go, TypeScript; likes backend, APIs, developer tools; practice AI-first agentic programming; editor Lilac Nights; portfolio https://caspel.dev" width="760">
+</picture>
+</p>
 
 Outside the day job, I'm building **[Hinoki](https://hinoki.caspel.dev/)**, a typed Python API framework with a Rust core and architecture rules you can check (pre-alpha, below). I also maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. And **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
 

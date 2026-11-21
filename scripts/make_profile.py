@@ -269,10 +269,63 @@ def connect(label: str, c: dict) -> str:
 """
 
 
+TOKENS = {
+    "dark": {"key": "#8ec5ff", "str": "#a9c8a2", "name": "#c9a5ff", "punct": "#9d98c8"},
+    "light": {"key": "#2563a8", "str": "#3f7a3a", "name": "#6d4fc2", "punct": "#625c85"},
+}
+# (key, value tokens) per line; a value is a string literal or a list of string literals.
+ABOUT_LINES = [
+    ("work", "cybersecurity · PKI @ Namirial Group"),
+    ("languages", ["Python", "Go", "TypeScript"]),
+    ("likes", ["backend", "APIs", "developer tools"]),
+    ("practice", "AI-first · agentic programming"),
+    ("editor", "Lilac Nights, obviously"),
+    ("portfolio", "https://caspel.dev"),
+]
+
+
+def about(theme: str, c: dict) -> str:
+    t = TOKENS[theme]
+    pad = max(len(k) for k, _ in ABOUT_LINES) + 3
+    rows = [f'<tspan fill="{t["name"]}">caspel26</tspan> <tspan fill="{t["punct"]}">= {{</tspan>']
+    for key, value in ABOUT_LINES:
+        gap = " " * (pad - len(key) - 2)
+        items = value if isinstance(value, list) else [value]
+        lits = f'<tspan fill="{t["punct"]}">, </tspan>'.join(f'<tspan fill="{t["str"]}">"{escape(v)}"</tspan>' for v in items)
+        if isinstance(value, list):
+            lits = f'<tspan fill="{t["punct"]}">[</tspan>{lits}<tspan fill="{t["punct"]}">]</tspan>'
+        rows.append(
+            f'    <tspan fill="{t["key"]}">"{key}"</tspan><tspan fill="{t["punct"]}">:</tspan>{gap}{lits}<tspan fill="{t["punct"]}">,</tspan>'
+        )
+    rows.append(f'<tspan fill="{t["punct"]}">}}</tspan>')
+    texts = "".join(
+        f'<text class="l" style="animation-delay:{.25 + i * .22:.2f}s" x="32" y="{86 + i * 28}" xml:space="preserve">{row}</text>'
+        for i, row in enumerate(rows)
+    )
+    height = 86 + len(rows) * 28 + 6
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 {height}" width="760" height="{height}" role="img" aria-label="caspel26 profile: {escape('; '.join(k + ' ' + (', '.join(v) if isinstance(v, list) else v) for k, v in ABOUT_LINES))}">
+<defs><linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="{c['violet']}"/><stop offset="1" stop-color="{c['ochre']}"/></linearGradient></defs>
+<style>
+.l{{font-family:{MONO};font-size:16px;fill:{c['text']};opacity:0;animation:in .6s ease-out forwards}}
+.fn{{font-family:{MONO};font-size:12px;fill:{c['muted']}}}
+@keyframes in{{from{{opacity:0;transform:translateX(-8px)}}to{{opacity:1;transform:none}}}}
+@media (prefers-reduced-motion:reduce){{.l{{animation:none;opacity:1}}}}
+</style>
+<rect x=".75" y=".75" width="758.5" height="{height - 1.5}" rx="16" fill="{c['card']}" stroke="{c['edge']}" stroke-width="1.5"/>
+<rect x="24" y="0" width="712" height="3" rx="1.5" fill="url(#bar)"/>
+<circle cx="30" cy="30" r="5.5" fill="#ff5f57"/><circle cx="50" cy="30" r="5.5" fill="#febc2e"/><circle cx="70" cy="30" r="5.5" fill="#28c840"/>
+<text class="fn" x="380" y="34" text-anchor="middle">about.py</text>
+<path d="M1 48H759" stroke="{c['edge']}"/>
+{texts}
+</svg>
+"""
+
+
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for theme, c in THEMES.items():
         write("header", theme, header(theme, c))
+        write("about", theme, about(theme, c))
         write("stack", theme, stack(theme, c))
         write("footer", theme, footer(theme, c))
         for label in CONNECT:

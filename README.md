@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:6d28d9,100:c4b5fd&height=220&section=header&text=Hi%2C%20I'm%20Giuseppe%20%F0%9F%91%8B&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%40%20Namirial%20Group&descAlignY=55&descSize=18" width="100%"/>
 
-<img src="assets/terminal.gif" alt="Terminal session: whoami, cat about.txt, ls projects/" width="100%" />
+<img src="assets/terminal.gif?v=2" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />
 
 <a href="https://caspel.dev"><img src="https://img.shields.io/badge/caspel.dev-portfolio-1E1B4B?style=for-the-badge&labelColor=6D28D9" alt="Portfolio" /></a>
 

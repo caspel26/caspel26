@@ -4,6 +4,6 @@
 .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:11px;font-weight:700}
 </style>
 <rect x=".75" y=".75" width="125.5" height="42.5" rx="21.25" fill="#241f4a" stroke="#2b2650" stroke-width="1.5"/>
-<circle cx="28" cy="22" r="8" fill="none" stroke="#b9a4ff" stroke-width="1.5"/><text class="mono" x="28" y="26" text-anchor="middle" fill="#b9a4ff">L</text>
+<path transform="translate(20 14) scale(.667)" fill="#b9a4ff" d="M20.45 0H3.55A3.55 3.55 0 0 0 0 3.55v16.9A3.55 3.55 0 0 0 3.55 24h16.9A3.55 3.55 0 0 0 24 20.45V3.55A3.55 3.55 0 0 0 20.45 0ZM7.1 20.45H3.56V9H7.1ZM5.33 7.44a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM20.45 20.45h-3.54v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.39V9h3.4v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.26 2.36 4.26 5.43Z"/>
 <text class="t" x="46" y="28">LinkedIn</text>
 </svg>

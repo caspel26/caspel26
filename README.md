@@ -290,8 +290,8 @@ Previews — click a language to open it here:
 ### Connect
 
 <p>
-<a href="https://caspel26.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-portfolio-dark.svg?v=1"><img src="assets/connect-portfolio-light.svg?v=1" alt="Portfolio" height="44"></picture></a>
-<a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-linkedin-dark.svg?v=1"><img src="assets/connect-linkedin-light.svg?v=1" alt="LinkedIn" height="44"></picture></a>
+<a href="https://caspel26.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-portfolio-dark.svg?v=2"><img src="assets/connect-portfolio-light.svg?v=2" alt="Portfolio" height="44"></picture></a>
+<a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-linkedin-dark.svg?v=2"><img src="assets/connect-linkedin-light.svg?v=2" alt="LinkedIn" height="44"></picture></a>
 <a href="mailto:giuseppe@caspel.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-email-dark.svg?v=1"><img src="assets/connect-email-light.svg?v=1" alt="Email" height="44"></picture></a>
 <a href="https://github.com/caspel26"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-github-dark.svg?v=1"><img src="assets/connect-github-light.svg?v=1" alt="GitHub" height="44"></picture></a>
 </p>

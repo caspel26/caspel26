@@ -164,9 +164,26 @@ text{{font-family:{SANS}}}
 """
 
 
+# LinkedIn is no longer in simple-icons; this is the same mark used on the portfolio site.
+LINKEDIN_PATH = (
+    "M20.45 0H3.55A3.55 3.55 0 0 0 0 3.55v16.9A3.55 3.55 0 0 0 3.55 24h16.9A3.55 3.55 0 0 0 24 20.45V3.55A3.55 3.55 0 0 0 20.45 0ZM7.1 20.45H3.56V9H7.1ZM5.33 7.44a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM20.45 20.45h-3.54v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.39V9h3.4v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.26 2.36 4.26 5.43Z"
+)
+
+
+def portfolio_mark(x: float, y: float, c: dict) -> str:
+    """The portfolio favicon (arc and bar) without its tile, fitted to 16px."""
+    return (
+        f'<g transform="translate({x - 9.5:.1f} {y - 5.7:.1f}) scale(.72)">'
+        f'<path d="M22.5 13.5A8.5 8.5 0 1 0 22.5 25.5" fill="none" stroke="{c["accent"]}" stroke-width="4.2" stroke-linecap="round"/>'
+        f'<rect x="26.5" y="26" width="9" height="4.4" rx="1.2" fill="{c["ochre"]}"/></g>'
+    )
+
+
 def glyph(name: str, x: float, y: float, c: dict) -> str:
     """A 16px brand glyph from simple-icons (CC0), or a lettered dot when there is none."""
-    path = BRAND_ICONS.get(name)
+    if name == "Portfolio":
+        return portfolio_mark(x, y, c)
+    path = LINKEDIN_PATH if name == "LinkedIn" else BRAND_ICONS.get(name)
     if path:
         return f'<path transform="translate({x:.0f} {y:.0f}) scale(.667)" fill="{c["accent"]}" d="{path}"/>'
     return (

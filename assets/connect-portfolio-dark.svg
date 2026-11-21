@@ -4,6 +4,6 @@
 .mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:11px;font-weight:700}
 </style>
 <rect x=".75" y=".75" width="133.5" height="42.5" rx="21.25" fill="#241f4a" stroke="#2b2650" stroke-width="1.5"/>
-<circle cx="28" cy="22" r="8" fill="none" stroke="#b9a4ff" stroke-width="1.5"/><text class="mono" x="28" y="26" text-anchor="middle" fill="#b9a4ff">P</text>
+<g transform="translate(10.5 8.3) scale(.72)"><path d="M22.5 13.5A8.5 8.5 0 1 0 22.5 25.5" fill="none" stroke="#b9a4ff" stroke-width="4.2" stroke-linecap="round"/><rect x="26.5" y="26" width="9" height="4.4" rx="1.2" fill="#e8c39e"/></g>
 <text class="t" x="46" y="28">Portfolio</text>
 </svg>

@@ -87,17 +87,23 @@ Handlers in Python, a core in Rust. What I am building right now.
 
 An endpoint declares its types, who may call it, whether it runs in a transaction and which errors it returns. That one declaration drives routing, validation, the OpenAPI document and the optional rules that `hinoki check` runs against your source — so the architecture of the app is something you can verify, not something you remember.
 
+Access and transactions are stated once for a group of routes. Every handler in it inherits them:
+
 ```python
-@http.post("/notes", status=201, atomic=True)
-async def create(data: NoteIn) -> NoteOut:
-    return NoteOut.from_model(await Note.acreate(data))
+tasks = RouteGroup("/tasks", access=member_only, atomic=True)
+
+@tasks.post("/", status=201)
+async def create_task(data: TaskIn, caller: Caller[Member]) -> TaskOut:
+    return TaskOut.from_model(await operations.create_task(caller.user.id, data))
 ```
 
-Invalid input is answered `422` before the handler runs, with a stable error body:
+Forget the policy on a new handler and `hinoki check` fails with the file, the line and the rule, before the app serves a request:
 
-```json
-{"error": "validation_error", "request_id": "…", "details": [{"path": "data.title", "code": "min_length", "message": "at least 1 character"}]}
+```text
+tests/projects/rulesapp.py:12: HNK-ACC-001 [violated] POST /items (create) declares no access policy
 ```
+
+<sub>Snippet from the <a href="https://github.com/caspel26/hinoki/blob/main/examples/tracker/api.py">tracker example</a>. The output is the sample from the <a href="https://hinoki.caspel.dev/dev/rules/">Rules guide</a>.</sub>
 
 <p align="center">
   <picture>

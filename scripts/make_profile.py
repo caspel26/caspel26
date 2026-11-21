@@ -321,10 +321,34 @@ def about(theme: str, c: dict) -> str:
 """
 
 
+def cta(theme: str, c: dict) -> str:
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" width="420" height="64" role="img" aria-label="Open the portfolio at caspel.dev">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="{c['violet']}"/><stop offset="1" stop-color="{c['accent']}"/></linearGradient></defs>
+<style>
+.t{{font-family:{SANS};font-size:18px;font-weight:700;fill:{c['text']}}}
+.u{{font-family:{MONO};font-size:12px;font-weight:600;fill:{c['muted']};letter-spacing:.4px}}
+.a{{fill:none;stroke:{c['accent']};stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;animation:nudge 2.4s ease-in-out infinite}}
+.edge{{stroke-dasharray:6 8;animation:march 3s linear infinite}}
+@keyframes nudge{{50%{{transform:translateX(5px)}}}}
+@keyframes march{{to{{stroke-dashoffset:-56}}}}
+@media (prefers-reduced-motion:reduce){{.a,.edge{{animation:none}}}}
+</style>
+<rect x="1" y="1" width="418" height="62" rx="31" fill="{c['chip']}"/>
+<rect class="edge" x="1" y="1" width="418" height="62" rx="31" fill="none" stroke="url(#g)" stroke-width="2"/>
+<circle cx="32" cy="32" r="18" fill="{c['card']}" stroke="{c['edge']}"/>
+{portfolio_mark(23, 24, c)}
+<text class="t" x="64" y="30">View my portfolio</text>
+<text class="u" x="64" y="48">caspel.dev</text>
+<path class="a" d="M370 32H392M384 24l8 8-8 8"/>
+</svg>
+"""
+
+
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for theme, c in THEMES.items():
         write("header", theme, header(theme, c))
+        write("cta", theme, cta(theme, c))
         write("about", theme, about(theme, c))
         write("stack", theme, stack(theme, c))
         write("footer", theme, footer(theme, c))

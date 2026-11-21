@@ -7,6 +7,8 @@
 
 <img src="assets/terminal.gif?v=2" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />
 
+<a href="https://caspel.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-dark.svg?v=1"><img src="assets/cta-light.svg?v=1" alt="View my portfolio at caspel.dev" width="420"></picture></a>
+
 </div>
 
 <!-- ============ ABOUT ============ -->

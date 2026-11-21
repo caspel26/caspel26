@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" width="1200" height="120" role="presentation">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8b6cf0"/><stop offset=".5" stop-color="#b9a4ff"/><stop offset="1" stop-color="#e8c39e"/></linearGradient></defs>
+<style>
+.w1{animation:slide 14s linear infinite}
+.w2{animation:slide 22s linear infinite reverse}
+@keyframes slide{to{transform:translateX(-600px)}}
+@media (prefers-reduced-motion:reduce){.w1,.w2{animation:none}}
+</style>
+<g fill="url(#g)">
+<path class="w2" opacity=".35" d="M0 70 Q150 20 300 70 T600 70 T900 70 T1200 70 T1500 70 T1800 70 V120 H0Z"/>
+<path class="w1" opacity=".6" d="M0 86 Q150 46 300 86 T600 86 T900 86 T1200 86 T1500 86 T1800 86 V120 H0Z"/>
+</g>
+</svg>

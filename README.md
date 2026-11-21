@@ -1,6 +1,9 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1e1b4b,50:6d28d9,100:c4b5fd&height=220&section=header&text=Hi%2C%20I'm%20Giuseppe%20%F0%9F%91%8B&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Software%20Engineer%20%40%20Namirial%20Group&descAlignY=55&descSize=18" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg?v=1">
+  <img src="assets/header-light.svg?v=1" alt="Hi, I'm Giuseppe. Software Engineer at Namirial Group: backend, APIs, developer tools." width="100%">
+</picture>
 
 <img src="assets/terminal.gif?v=2" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />
 
@@ -25,6 +28,24 @@ caspel26 = {
 ```
 
 Outside the day job, I'm building **[Hinoki](https://hinoki.caspel.dev/)**, a typed Python API framework with a Rust core and architecture rules you can check (pre-alpha, below). I also maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. And **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
+
+<!-- ============ FEATURED ============ -->
+### Projects
+
+<table>
+  <tr>
+    <td width="50%"><a href="https://hinoki.caspel.dev/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-hinoki-dark.svg?v=1"><img src="assets/card-hinoki-light.svg?v=1" alt="hinoki: Typed Python APIs with a Rust core, and architecture rules you can check." width="100%"></picture></a></td>
+    <td width="50%"><a href="https://github.com/caspel26/django-ninja-aio-crud"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-django-ninja-aio-crud-dark.svg?v=1"><img src="assets/card-django-ninja-aio-crud-light.svg?v=1" alt="django-ninja-aio-crud: Async CRUD framework for Django Ninja, with an MCP server for AI agents." width="100%"></picture></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/caspel26/goninja"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-goninja-dark.svg?v=1"><img src="assets/card-goninja-light.svg?v=1" alt="goninja: Code-first CRUD REST APIs for Go, generated from annotated structs." width="100%"></picture></a></td>
+    <td width="50%"><a href="https://github.com/caspel26/shimwire"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-shimwire-dark.svg?v=1"><img src="assets/card-shimwire-light.svg?v=1" alt="shimwire: Mock and test an API from one OpenAPI spec. A Bun and TypeScript CLI." width="100%"></picture></a></td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="https://github.com/caspel26/lilac-nights"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-lilac-nights-dark.svg?v=1"><img src="assets/card-lilac-nights-light.svg?v=1" alt="lilac-nights: A dark VS Code theme with a lilac spine, built to be read for eight hours." width="100%"></picture></a></td>
+    <td width="50%"><a href="https://myshiori.eu"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-shiori-dark.svg?v=1"><img src="assets/card-shiori-light.svg?v=1" alt="Shiori: Anime discovery and tracking, built end to end and in public beta." width="100%"></picture></a></td>
+  </tr>
+</table>
 
 <!-- ============ HINOKI ============ -->
 <div align="center">
@@ -94,9 +115,12 @@ Invalid input is answered `422` before the handler runs, with a stable error bod
 > Hinoki is **pre-alpha and not released**: the API and the migration format may change, and I make no performance claims. Try it from a source checkout, with disposable data: `git clone https://github.com/caspel26/hinoki`, then follow the [quick start](https://hinoki.caspel.dev/dev/quick-start/).
 
 <!-- ============ FEATURED PROJECTS ============ -->
-### More projects
+### More about the projects
 
-#### [django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)
+<details>
+<summary><b>django-ninja-aio-crud</b> · features, install, demo</summary>
+
+<br>
 
 Async dynamic CRUD framework for Django Ninja.
 
@@ -118,9 +142,12 @@ pip install django-ninja-aio-crud
 
 <img src="https://raw.githubusercontent.com/caspel26/django-ninja-aio-crud/main/docs/images/quickstart-demo.gif" alt="django-ninja-aio-crud quick start demo" width="100%" />
 
-<br>
+</details>
 
-#### [goninja](https://github.com/caspel26/goninja)
+<details>
+<summary><b>goninja</b> · features, install, demo</summary>
+
+<br>
 
 Code-first CRUD REST APIs for Go, generated from annotated structs.
 
@@ -143,9 +170,12 @@ go install github.com/caspel26/goninja/cmd/goninja@latest
 
 <img src="https://raw.githubusercontent.com/caspel26/goninja/main/docs/demo/vscode-demo.gif" alt="goninja quick start demo" width="100%" />
 
-<br>
+</details>
 
-#### [shimwire](https://github.com/caspel26/shimwire)
+<details>
+<summary><b>shimwire</b> · features, install, demo</summary>
+
+<br>
 
 One CLI for both sides of an API you don't fully control yet — mocks the parts that aren't built, and tests the parts that are, from a single OpenAPI/Swagger spec.
 
@@ -167,9 +197,12 @@ npm install -g shimwire
 
 <img src="https://raw.githubusercontent.com/caspel26/shimwire/main/assets/terminal-demo.gif" alt="shimwire terminal demo" width="100%" />
 
-<br>
+</details>
 
-#### [lilac-nights](https://github.com/caspel26/lilac-nights)
+<details>
+<summary><b>lilac-nights</b> · features, install, previews</summary>
+
+<br>
 
 A dark VS Code theme with a lilac spine — built to be read for eight hours straight.
 
@@ -225,6 +258,8 @@ Previews — click a language to open it here:
 <img src="https://raw.githubusercontent.com/caspel26/lilac-nights/main/images/preview-cpp.png" alt="Lilac Nights in C++" width="100%" />
 </details>
 
+</details>
+
 <!-- ============ CURRENTLY ============ -->
 ### Currently
 
@@ -236,33 +271,14 @@ Previews — click a language to open it here:
 <!-- ============ STACK ============ -->
 ### Stack
 
-<p>
-<img src="https://skillicons.dev/icons?i=python,go,ts,js&theme=dark" alt="Python, Go, TypeScript, JavaScript" /><br>
-<sub><b>Languages</b></sub>
-</p>
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=1">
+  <img src="assets/stack-light.svg?v=1" alt="Languages: Python, Go, TypeScript, JavaScript, Rust, SQL. Backend and frontend: Django, DRF, FastAPI, Django Ninja, Gin, Echo, Huma, GORM, Node.js, Bun, Vue, Next.js, Tailwind CSS. Data and delivery: PostgreSQL, MySQL, SQLite, Redis, Docker, Linux, Nginx, HAProxy, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS. Testing and AI: Pytest, Playwright, Anthropic, OpenAI, Gemini, Perplexity." width="100%">
+</picture>
+</div>
 
-<p>
-<img src="https://skillicons.dev/icons?i=django,fastapi,nodejs,bun&theme=dark" alt="Django, FastAPI, Node.js, Bun" /><br>
-<sub><b>Backend</b> · also Django Ninja, Gin, Echo, Huma, GORM</sub>
-</p>
-
-<p>
-<img src="https://skillicons.dev/icons?i=vue,nextjs,tailwind&theme=dark" alt="Vue, Next.js, Tailwind CSS" /><br>
-<sub><b>Frontend</b> · also Framer Motion · used in my projects, with AI assistance for the implementation</sub>
-</p>
-
-<p>
-<img src="https://skillicons.dev/icons?i=postgres,mysql,sqlite,redis&theme=dark" alt="PostgreSQL, MySQL, SQLite, Redis" /><br>
-<sub><b>Data</b></sub>
-</p>
-
-<p>
-<img src="https://skillicons.dev/icons?i=docker,linux,nginx,git,github,githubactions,gitlab,jenkins,cloudflare,aws&theme=dark" alt="Docker, Linux, Nginx, Git, GitHub, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS" /><br>
-<sub><b>DevOps</b> · also HAProxy, Oracle Cloud</sub>
-</p>
-
-<p><sub><b>Testing</b> · Pytest · Playwright</sub><br>
-<sub><b>AI · LLM</b> · Anthropic · OpenAI · Gemini · Perplexity</sub></p>
+<sub>Frontend work is used in my projects, with AI assistance for the implementation.</sub>
 
 <!-- ============ OTHER PROJECTS ============ -->
 ### Other Projects
@@ -281,4 +297,7 @@ Previews — click a language to open it here:
 
 <a href="https://caspel26.github.io"><img src="https://img.shields.io/badge/Portfolio-6D28D9?style=flat-square&logo=githubpages&logoColor=white" /></a> <a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a> <a href="mailto:giuseppe@caspel.dev"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:c4b5fd,50:6d28d9,100:1e1b4b&height=100&section=footer" width="100%"/>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg?v=1">
+  <img src="assets/footer-light.svg?v=1" alt="" width="100%">
+</picture>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 190" width="580" height="190" role="img" aria-label="django-ninja-aio-crud: Async CRUD framework for Django Ninja, with an MCP server for AI agents.">
+<defs>
+<linearGradient id="bar" x1="0" x2="1"><stop offset="0" stop-color="#8b6cf0"/><stop offset="1" stop-color="#8b6cf0"/></linearGradient>
+<radialGradient id="glow" cx="1" cy="0" r="1"><stop offset="0" stop-color="#8b6cf0" stop-opacity=".28"/><stop offset="1" stop-color="#8b6cf0" stop-opacity="0"/></radialGradient>
+<clipPath id="clip"><rect x="1" y="1" width="578" height="188" rx="18"/></clipPath>
+</defs>
+<style>
+text{font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif}
+.name{font-size:26px;font-weight:700;fill:#f1eeff;letter-spacing:-.4px}
+.desc{font-size:15px;fill:#9d98c8}
+.tag{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:11px;font-weight:600;letter-spacing:.6px}
+.num{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:12px;fill:#9d98c8}
+.arrow{fill:none;stroke:#b9a4ff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;animation:nudge 2.4s ease-in-out infinite}
+.bar{transform-box:fill-box;transform-origin:left;animation:bar 4.5s ease-in-out 0.35s infinite alternate}
+.glow{animation:pulse 5s ease-in-out 0.5s infinite alternate}
+@keyframes nudge{50%{transform:translate(3px,-3px)}}
+@keyframes bar{from{transform:scaleX(.18)}to{transform:scaleX(1)}}
+@keyframes pulse{from{opacity:.55}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.arrow,.bar,.glow{animation:none}}
+</style>
+<g clip-path="url(#clip)">
+<rect width="580" height="190" fill="#17142e"/>
+<rect class="glow" width="580" height="190" fill="url(#glow)"/>
+<rect class="bar" x="0" y="0" width="580" height="3" fill="url(#bar)"/>
+</g>
+<rect x="1" y="1" width="578" height="188" rx="18" fill="none" stroke="#2b2650" stroke-width="1.5"/>
+<text class="num" x="28" y="38">02</text>
+<text class="name" x="28" y="76">django-ninja-aio-crud</text>
+<text class="desc" x="28" y="102">Async CRUD framework for Django Ninja,</text>
+<text class="desc" x="28" y="122">with an MCP server for AI agents.</text>
+<rect x="28" y="138" width="66" height="26" rx="13" fill="#241f4a"/><text class="tag" x="61" y="155.5" text-anchor="middle" fill="#b9a4ff">PYTHON</text><rect x="102.4" y="138" width="111" height="26" rx="13" fill="#241f4a"/><text class="tag" x="158" y="155.5" text-anchor="middle" fill="#b9a4ff">DJANGO NINJA</text><rect x="221.20000000000002" y="138" width="44" height="26" rx="13" fill="#241f4a"/><text class="tag" x="243" y="155.5" text-anchor="middle" fill="#b9a4ff">MCP</text>
+<path class="arrow" d="M534 38 L552 20 M538 20 H552 V34"/>
+</svg>

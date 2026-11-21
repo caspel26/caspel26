@@ -32,20 +32,14 @@ Outside the day job, I'm building **[Hinoki](https://hinoki.caspel.dev/)**, a ty
 <!-- ============ FEATURED ============ -->
 ### Projects
 
-<table>
-  <tr>
-    <td width="50%"><a href="https://hinoki.caspel.dev/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-hinoki-dark.svg?v=1"><img src="assets/card-hinoki-light.svg?v=1" alt="hinoki: Typed Python APIs with a Rust core, and architecture rules you can check." width="100%"></picture></a></td>
-    <td width="50%"><a href="https://github.com/caspel26/django-ninja-aio-crud"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-django-ninja-aio-crud-dark.svg?v=1"><img src="assets/card-django-ninja-aio-crud-light.svg?v=1" alt="django-ninja-aio-crud: Async CRUD framework for Django Ninja, with an MCP server for AI agents." width="100%"></picture></a></td>
-  </tr>
-  <tr>
-    <td width="50%"><a href="https://github.com/caspel26/goninja"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-goninja-dark.svg?v=1"><img src="assets/card-goninja-light.svg?v=1" alt="goninja: Code-first CRUD REST APIs for Go, generated from annotated structs." width="100%"></picture></a></td>
-    <td width="50%"><a href="https://github.com/caspel26/shimwire"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-shimwire-dark.svg?v=1"><img src="assets/card-shimwire-light.svg?v=1" alt="shimwire: Mock and test an API from one OpenAPI spec. A Bun and TypeScript CLI." width="100%"></picture></a></td>
-  </tr>
-  <tr>
-    <td width="50%"><a href="https://github.com/caspel26/lilac-nights"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-lilac-nights-dark.svg?v=1"><img src="assets/card-lilac-nights-light.svg?v=1" alt="lilac-nights: A dark VS Code theme with a lilac spine, built to be read for eight hours." width="100%"></picture></a></td>
-    <td width="50%"><a href="https://myshiori.eu"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-shiori-dark.svg?v=1"><img src="assets/card-shiori-light.svg?v=1" alt="Shiori: Anime discovery and tracking, built end to end and in public beta." width="100%"></picture></a></td>
-  </tr>
-</table>
+<p align="center">
+<a href="https://hinoki.caspel.dev/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-hinoki-dark.svg?v=2"><img src="assets/card-hinoki-light.svg?v=2" alt="hinoki: Typed Python APIs with a Rust core, and architecture rules you can check." width="49%"></picture></a>
+<a href="https://github.com/caspel26/django-ninja-aio-crud"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-django-ninja-aio-crud-dark.svg?v=2"><img src="assets/card-django-ninja-aio-crud-light.svg?v=2" alt="django-ninja-aio-crud: Async CRUD framework for Django Ninja, with an MCP server for AI agents." width="49%"></picture></a>
+<a href="https://github.com/caspel26/goninja"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-goninja-dark.svg?v=2"><img src="assets/card-goninja-light.svg?v=2" alt="goninja: Code-first CRUD REST APIs for Go, generated from annotated structs." width="49%"></picture></a>
+<a href="https://github.com/caspel26/shimwire"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-shimwire-dark.svg?v=2"><img src="assets/card-shimwire-light.svg?v=2" alt="shimwire: Mock and test an API from one OpenAPI spec. A Bun and TypeScript CLI." width="49%"></picture></a>
+<a href="https://github.com/caspel26/lilac-nights"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-lilac-nights-dark.svg?v=2"><img src="assets/card-lilac-nights-light.svg?v=2" alt="lilac-nights: A dark VS Code theme with a lilac spine, built to be read for eight hours." width="49%"></picture></a>
+<a href="https://myshiori.eu"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-shiori-dark.svg?v=2"><img src="assets/card-shiori-light.svg?v=2" alt="Shiori: Anime discovery and tracking, built end to end and in public beta." width="49%"></picture></a>
+</p>
 
 <!-- ============ HINOKI ============ -->
 <div align="center">

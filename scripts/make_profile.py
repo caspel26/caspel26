@@ -78,7 +78,7 @@ def header(theme: str, c: dict) -> str:
         f'<text class="role" style="animation-delay:{i * 3}s" x="80" y="214">{escape(r)}</text>'
         for i, r in enumerate(ROLES)
     )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Hi, I'm Giuseppe. Backend engineer: frameworks, APIs and developer tools.">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Hi, I'm Giuseppe. Software Engineer at Namirial Group">
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c['bg2']}"/><stop offset="1" stop-color="{c['bg']}"/></linearGradient>
 <linearGradient id="rule" x1="0" x2="1"><stop offset="0" stop-color="{c['violet']}"/><stop offset=".5" stop-color="{c['accent']}"/><stop offset="1" stop-color="{c['ochre']}"/></linearGradient>
@@ -107,7 +107,7 @@ text{{font-family:{SANS}}}
 <circle class="blob b2" cx="900" cy="250" r="170" fill="{c['accent']}"/>
 <circle class="blob b3" cx="1080" cy="40" r="110" fill="{c['ochre']}"/>
 <text class="hi" x="80" y="120">Hi, I'm Giuseppe</text>
-<text class="sub" x="80" y="164">Backend engineer · building Hinoki, goninja and django-ninja-aio-crud</text>
+<text class="sub" x="80" y="164">Software Engineer @ Namirial Group</text>
 {roles}
 <rect class="sweep" x="80" y="240" width="220" height="3" rx="1.5" fill="url(#rule)"/>
 </g>

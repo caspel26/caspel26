@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg?v=3">
-  <img src="assets/header-light.svg?v=3" alt="Hi, I'm Giuseppe. Backend engineer: frameworks, APIs and developer tools." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg?v=4">
+  <img src="assets/header-light.svg?v=4" alt="Hi, I'm Giuseppe. Software Engineer at Namirial Group." width="100%">
 </picture>
 
 <img src="assets/terminal.gif?v=2" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />

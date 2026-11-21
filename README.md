@@ -1,13 +1,13 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg?v=4">
-  <img src="assets/header-light.svg?v=4" alt="Hi, I'm Giuseppe. Software Engineer at Namirial Group." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg?v=5">
+  <img src="assets/header-light.svg?v=5" alt="Hi, I'm Giuseppe. Software Engineer at Namirial Group." width="100%">
 </picture>
 
-<img src="assets/terminal.gif?v=2" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />
+<img src="assets/terminal.gif?v=3" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />
 
-<a href="https://caspel.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/cta-dark.svg?v=1"><img src="assets/cta-light.svg?v=1" alt="View my portfolio at caspel.dev" width="420"></picture></a>
+<sub><a href="https://caspel.dev">Portfolio</a> · <a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/">LinkedIn</a> · <a href="https://github.com/caspel26">GitHub</a> · <a href="mailto:giuseppe@caspel.dev">Email</a></sub>
 
 </div>
 
@@ -18,12 +18,12 @@ I write backend software for a living — cybersecurity and PKI with the Namiria
 
 <p align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg?v=1">
-  <img src="assets/about-light.svg?v=1" alt="caspel26: work, cybersecurity and PKI at Namirial Group; languages Python, Go, TypeScript; likes backend, APIs, developer tools; practice AI-first agentic programming; editor Lilac Nights; portfolio https://caspel.dev" width="760">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/about-dark.svg?v=2">
+  <img src="assets/about-light.svg?v=2" alt="caspel26: work, cybersecurity and PKI at Namirial Group; languages Python, Go, TypeScript; likes backend, APIs, developer tools; practice AI-first agentic programming; editor Lilac Nights" width="760">
 </picture>
 </p>
 
-Outside the day job, I'm building **[Hinoki](https://hinoki.caspel.dev/)**, a typed Python API framework with a Rust core and architecture rules you can check (pre-alpha, below). I also maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)**, an async CRUD framework for Django Ninja with 50+ stars, and **[goninja](https://github.com/caspel26/goninja)**, its Go counterpart — same idea, opposite approach: it generates the CRUD as real Go source instead of resolving it at runtime. And **[shimwire](https://github.com/caspel26/shimwire)**, a Bun/TypeScript CLI that mocks and tests APIs from the same OpenAPI spec.
+Outside the day job I build **[Hinoki](https://hinoki.caspel.dev/)**, a typed Python API framework with a Rust core, and maintain **[django-ninja-aio-crud](https://github.com/caspel26/django-ninja-aio-crud)** (50+ stars), its Go counterpart **[goninja](https://github.com/caspel26/goninja)** and **[shimwire](https://github.com/caspel26/shimwire)**, an OpenAPI mock-and-test CLI. More below.
 
 <!-- ============ FEATURED ============ -->
 ### Projects
@@ -36,6 +36,25 @@ Outside the day job, I'm building **[Hinoki](https://hinoki.caspel.dev/)**, a ty
 <a href="https://github.com/caspel26/lilac-nights"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-lilac-nights-dark.svg?v=2"><img src="assets/card-lilac-nights-light.svg?v=2" alt="lilac-nights: A dark VS Code theme with a lilac spine, built to be read for eight hours." width="49%"></picture></a>
 <a href="https://myshiori.eu"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/card-shiori-dark.svg?v=2"><img src="assets/card-shiori-light.svg?v=2" alt="Shiori: Anime discovery and tracking, built end to end and in public beta." width="49%"></picture></a>
 </p>
+
+<!-- ============ CURRENTLY ============ -->
+### Currently
+
+- Building async CRUD/backend infrastructure in Python and Go
+- Integrating LLMs into production backends — tool calling, agentic workflows, structured outputs, RAG, async/streaming inference
+- Exploring system design and architecture patterns for async services
+
+<!-- ============ STACK ============ -->
+### Stack
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=3">
+  <img src="assets/stack-light.svg?v=3" alt="Languages: Python, Go, TypeScript, JavaScript, Rust, SQL. Backend and frontend: Django, DRF, FastAPI, Django Ninja, Gin, Echo, Huma, GORM, Node.js, Bun, Vue, Next.js, Tailwind CSS. Data and delivery: PostgreSQL, MySQL, SQLite, Redis, Docker, Linux, Nginx, HAProxy, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS. Testing and AI: Pytest, Playwright, Anthropic, OpenAI, Gemini, Perplexity." width="100%">
+</picture>
+</div>
+
+<sub>Frontend work is used in my projects, with AI assistance for the implementation.</sub>
 
 <!-- ============ HINOKI ============ -->
 <div align="center">
@@ -249,26 +268,6 @@ Previews — click a language to open it here:
 </details>
 
 </details>
-
-<!-- ============ CURRENTLY ============ -->
-### Currently
-
-- Building async CRUD/backend infrastructure in Python and Go
-- Building **[Hinoki](https://hinoki.caspel.dev/)**, a typed Python API framework with a Rust core: its own HTTP server (Kiso), middleware, WSGI support and the path to a first release
-- Integrating LLMs into production backends — tool calling, agentic workflows, structured outputs, RAG, async/streaming inference
-- Exploring system design and architecture patterns for async services
-
-<!-- ============ STACK ============ -->
-### Stack
-
-<div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=3">
-  <img src="assets/stack-light.svg?v=3" alt="Languages: Python, Go, TypeScript, JavaScript, Rust, SQL. Backend and frontend: Django, DRF, FastAPI, Django Ninja, Gin, Echo, Huma, GORM, Node.js, Bun, Vue, Next.js, Tailwind CSS. Data and delivery: PostgreSQL, MySQL, SQLite, Redis, Docker, Linux, Nginx, HAProxy, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS. Testing and AI: Pytest, Playwright, Anthropic, OpenAI, Gemini, Perplexity." width="100%">
-</picture>
-</div>
-
-<sub>Frontend work is used in my projects, with AI assistance for the implementation.</sub>
 
 <!-- ============ OTHER PROJECTS ============ -->
 ### Other Projects

@@ -78,6 +78,20 @@ def header(theme: str, c: dict) -> str:
         f'<text class="role" style="animation-delay:{i * 3}s" x="80" y="214">{escape(r)}</text>'
         for i, r in enumerate(ROLES)
     )
+    shelf = "".join(
+        f'<g class="float" style="animation-delay:{-i * 1.8:.1f}s" transform="translate({x} {y})">'
+        f'<g class="fl"><rect width="340" height="56" rx="14" fill="{c["card"]}" fill-opacity=".78" stroke="{c["edge"]}" stroke-width="1.5"/>'
+        f'<circle cx="26" cy="28" r="6" fill="{dot}"/>'
+        f'<text class="pn" x="46" y="34">{name}</text>'
+        f'<text class="pt" x="314" y="33" text-anchor="end">{tag}</text></g></g>'
+        for i, (name, tag, dot, x, y) in enumerate(
+            [
+                ("hinoki", "PYTHON · RUST", c["ochre"], 770, 44),
+                ("django-ninja-aio-crud", "PYTHON", c["violet"], 806, 122),
+                ("goninja", "GO", c["accent"], 770, 200),
+            ]
+        )
+    )
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Hi, I'm Giuseppe. Software Engineer at Namirial Group">
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c['bg2']}"/><stop offset="1" stop-color="{c['bg']}"/></linearGradient>
@@ -95,11 +109,15 @@ text{{font-family:{SANS}}}
 .b2{{animation:drift2 17s ease-in-out infinite alternate}}
 .b3{{animation:drift1 19s ease-in-out infinite alternate-reverse}}
 .sweep{{transform-box:fill-box;transform-origin:left;animation:sweep 5s ease-in-out infinite alternate}}
+.fl{{animation:bob 6s ease-in-out infinite alternate;animation-delay:inherit}}
+.pn{{font-family:{MONO};font-size:15px;font-weight:600;fill:{c['text']}}}
+.pt{{font-family:{MONO};font-size:11px;font-weight:600;letter-spacing:1px;fill:{c['muted']}}}
+@keyframes bob{{from{{transform:translateY(-5px)}}to{{transform:translateY(6px)}}}}
 @keyframes role{{0%{{opacity:0;transform:translateY(8px)}}4%,22%{{opacity:1;transform:none}}26%,100%{{opacity:0;transform:translateY(-6px)}}}}
 @keyframes drift1{{to{{transform:translate(120px,40px)}}}}
 @keyframes drift2{{to{{transform:translate(-140px,-30px)}}}}
 @keyframes sweep{{from{{transform:scaleX(.25)}}to{{transform:scaleX(1)}}}}
-@media (prefers-reduced-motion:reduce){{.role,.b1,.b2,.b3,.sweep{{animation:none}}.role:first-of-type{{opacity:1}}}}
+@media (prefers-reduced-motion:reduce){{.role,.b1,.b2,.b3,.sweep,.fl{{animation:none}}.role:first-of-type{{opacity:1}}}}
 </style>
 <g clip-path="url(#clip)">
 <rect width="1200" height="300" fill="url(#bg)"/>
@@ -110,6 +128,7 @@ text{{font-family:{SANS}}}
 <text class="sub" x="80" y="164">Software Engineer @ Namirial Group</text>
 {roles}
 <rect class="sweep" x="80" y="240" width="220" height="3" rx="1.5" fill="url(#rule)"/>
+{shelf}
 </g>
 <rect x=".75" y=".75" width="1198.5" height="298.5" rx="21.5" fill="none" stroke="{c['edge']}" stroke-width="1.5"/>
 </svg>
@@ -285,7 +304,6 @@ ABOUT_LINES = [
     ("likes", ["backend", "APIs", "developer tools"]),
     ("practice", "AI-first · agentic programming"),
     ("editor", "Lilac Nights, obviously"),
-    ("portfolio", "https://caspel.dev"),
 ]
 
 
@@ -326,34 +344,10 @@ def about(theme: str, c: dict) -> str:
 """
 
 
-def cta(theme: str, c: dict) -> str:
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 64" width="420" height="64" role="img" aria-label="Open the portfolio at caspel.dev">
-<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="{c['violet']}"/><stop offset="1" stop-color="{c['accent']}"/></linearGradient></defs>
-<style>
-.t{{font-family:{SANS};font-size:18px;font-weight:700;fill:{c['text']}}}
-.u{{font-family:{MONO};font-size:12px;font-weight:600;fill:{c['muted']};letter-spacing:.4px}}
-.a{{fill:none;stroke:{c['accent']};stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;animation:nudge 2.4s ease-in-out infinite}}
-.edge{{stroke-dasharray:6 8;animation:march 3s linear infinite}}
-@keyframes nudge{{50%{{transform:translateX(5px)}}}}
-@keyframes march{{to{{stroke-dashoffset:-56}}}}
-@media (prefers-reduced-motion:reduce){{.a,.edge{{animation:none}}}}
-</style>
-<rect x="1" y="1" width="418" height="62" rx="31" fill="{c['chip']}"/>
-<rect class="edge" x="1" y="1" width="418" height="62" rx="31" fill="none" stroke="url(#g)" stroke-width="2"/>
-<circle cx="32" cy="32" r="18" fill="{c['card']}" stroke="{c['edge']}"/>
-{portfolio_mark(23, 24, c)}
-<text class="t" x="64" y="30">View my portfolio</text>
-<text class="u" x="64" y="48">caspel.dev</text>
-<path class="a" d="M370 32H392M384 24l8 8-8 8"/>
-</svg>
-"""
-
-
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for theme, c in THEMES.items():
         write("header", theme, header(theme, c))
-        write("cta", theme, cta(theme, c))
         write("about", theme, about(theme, c))
         write("stack", theme, stack(theme, c))
         write("footer", theme, footer(theme, c))

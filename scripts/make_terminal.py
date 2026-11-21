@@ -91,7 +91,9 @@ def frame(lines: list[list[Segment]], cursor: bool) -> Image.Image:
         draw.rectangle(
             (end_x + 2 * SCALE, top, end_x + 14 * SCALE, top + 26 * SCALE), fill=LILAC
         )
-    return img.resize((W * 3 // 2, H * 3 // 2), Image.Resampling.LANCZOS)
+    # Crop to the card so it spans the full image width, like the header above it.
+    img = img.crop((22 * SCALE, 18 * SCALE, (W - 22) * SCALE, (H - 18) * SCALE))
+    return img.resize(((W - 44) * 3 // 2, (H - 36) * 3 // 2), Image.Resampling.LANCZOS)
 
 
 def build() -> list[tuple[Image.Image, int]]:
@@ -134,12 +136,27 @@ def palette_from(sample: Image.Image) -> Image.Image:
     return sheet.quantize(colors=128, dither=Image.Dither.NONE)
 
 
+def corner_mask(size: tuple[int, int]) -> Image.Image:
+    """White outside the card's rounded corners: those pixels become transparent."""
+    mask = Image.new("L", size, 255)
+    ImageDraw.Draw(mask).rounded_rectangle(
+        (0, 0, size[0] - 1, size[1] - 1), radius=27, fill=0
+    )
+    return mask
+
+
 def main() -> None:
     built = build()
     palette = palette_from(built[-2][0])
-    images = [
-        image.quantize(palette=palette, dither=Image.Dither.NONE) for image, _ in built
-    ]
+    clear = palette.getpalette() or []
+    bg = tuple(int(BG[i : i + 2], 16) for i in (1, 3, 5))
+    index = next(i for i in range(0, len(clear), 3) if tuple(clear[i : i + 3]) == bg) // 3
+    mask = corner_mask(built[0][0].size)
+    images = []
+    for image, _ in built:
+        quantized = image.quantize(palette=palette, dither=Image.Dither.NONE)
+        quantized.paste(index, mask=mask)
+        images.append(quantized)
     images[0].save(
         OUT,
         save_all=True,
@@ -147,6 +164,8 @@ def main() -> None:
         duration=[ms for _, ms in built],
         loop=0,
         optimize=True,
+        transparency=index,
+        disposal=2,
     )
     total = sum(ms for _, ms in built) / 1000
     print(f"{OUT}: {len(built)} frames, {total:.1f} s, {OUT.stat().st_size // 1024} KB")

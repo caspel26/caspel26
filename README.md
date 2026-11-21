@@ -97,15 +97,15 @@ member_only = Access(auth=MemberTokens(), permissions=[USE])
 class TaskIn(Schema):
     title: Annotated[str, Field(min_length=1, max_length=120)]
 
-@derive(exclude=("owner_id",))
-class TaskOut(Schema, model=Task): ...
+@derive(Task, exclude=("owner_id",))
+class TaskOut(Schema): ...
 
 # api.py: the endpoint. Access and transactions are stated once for the whole group.
 tasks = RouteGroup("/tasks", access=member_only, atomic=True)
 
 @tasks.post("/", status=201)
 async def create_task(data: TaskIn, caller: Caller[Member]) -> TaskOut:
-    return out(await operations.create_task(caller.user.id, data))
+    return await operations.create_task(caller.user.id, data)
 ```
 
 Routing, input validation, the OpenAPI document and the docs come from those declarations. Add a handler without an access policy and `hinoki check` reports it with the file, the line and the rule (sample from the [Rules guide](https://hinoki.caspel.dev/dev/rules/)):

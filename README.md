@@ -87,23 +87,32 @@ Handlers in Python, a core in Rust. What I am building right now.
 
 An endpoint declares its types, who may call it, whether it runs in a transaction and which errors it returns. That one declaration drives routing, validation, the OpenAPI document and the optional rules that `hinoki check` runs against your source — so the architecture of the app is something you can verify, not something you remember.
 
-Access and transactions are stated once for a group of routes. Every handler in it inherits them:
+The pieces are plain Python, one per file. Here is the task tracker from the repository's [examples](https://github.com/caspel26/hinoki/tree/main/examples/tracker), abridged:
 
 ```python
+# security.py: who may call. One reusable policy.
+member_only = Access(auth=MemberTokens(), permissions=[USE])
+
+# schemas.py: what crosses the boundary. A model column reaches a client only through a Schema.
+class TaskIn(Schema):
+    title: Annotated[str, Field(min_length=1, max_length=120)]
+
+@derive(exclude=("owner_id",))
+class TaskOut(Schema, model=Task): ...
+
+# api.py: the endpoint. Access and transactions are stated once for the whole group.
 tasks = RouteGroup("/tasks", access=member_only, atomic=True)
 
 @tasks.post("/", status=201)
 async def create_task(data: TaskIn, caller: Caller[Member]) -> TaskOut:
-    return TaskOut.from_model(await operations.create_task(caller.user.id, data))
+    return out(await operations.create_task(caller.user.id, data))
 ```
 
-Forget the policy on a new handler and `hinoki check` fails with the file, the line and the rule, before the app serves a request:
+Routing, input validation, the OpenAPI document and the docs come from those declarations. Add a handler without an access policy and `hinoki check` reports it with the file, the line and the rule (sample from the [Rules guide](https://hinoki.caspel.dev/dev/rules/)):
 
 ```text
 tests/projects/rulesapp.py:12: HNK-ACC-001 [violated] POST /items (create) declares no access policy
 ```
-
-<sub>Snippet from the <a href="https://github.com/caspel26/hinoki/blob/main/examples/tracker/api.py">tracker example</a>. The output is the sample from the <a href="https://hinoki.caspel.dev/dev/rules/">Rules guide</a>.</sub>
 
 <p align="center">
   <picture>

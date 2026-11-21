@@ -74,46 +74,77 @@ def write(name: str, theme: str, body: str) -> None:
 
 
 def header(theme: str, c: dict) -> str:
-    roles = "".join(
-        f'<text class="role" style="animation-delay:{i * 3}s" x="80" y="214">{escape(r)}</text>'
-        for i, r in enumerate(ROLES)
+    roles = "".join(role_text(i, r) for i, r in enumerate(ROLES))
+    twinkle = "".join(
+        f'<circle class="tw" style="animation-delay:{d}s" cx="{x}" cy="{y}" r="{r}" fill="{c["accent"]}"/>'
+        for x, y, r, d in [(760, 52, 1.8, 0), (880, 238, 1.6, 1.3), (990, 96, 2, 2.1),
+                           (1090, 210, 1.7, 0.7), (1150, 60, 1.5, 3.2), (830, 140, 1.4, 2.6)]
     )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Hi, I'm Giuseppe. Software Engineer at Namirial Group">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 322" width="1200" height="322" role="img" aria-label="Hi, I'm Giuseppe. Software Engineer at Namirial Group">
 <defs>
 <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="{c['bg2']}"/><stop offset="1" stop-color="{c['bg']}"/></linearGradient>
 <linearGradient id="rule" x1="0" x2="1"><stop offset="0" stop-color="{c['violet']}"/><stop offset=".5" stop-color="{c['accent']}"/><stop offset="1" stop-color="{c['ochre']}"/></linearGradient>
+<linearGradient id="glint" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+<linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".6" stop-color="#fff" stop-opacity="1"/></linearGradient>
+<mask id="dotmask"><rect x="640" y="0" width="560" height="300" fill="url(#fade)"/></mask>
+<pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="{c['accent']}"/></pattern>
 <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="46"/></filter>
 <clipPath id="clip"><rect width="1200" height="300" rx="22"/></clipPath>
+<clipPath id="ruleclip"><rect x="80" y="240" width="220" height="3" rx="1.5"/></clipPath>
 </defs>
 <style>
 text{{font-family:{SANS}}}
 .hi{{font-size:60px;font-weight:700;fill:{c['text']};letter-spacing:-1.5px}}
 .sub{{font-size:22px;fill:{c['muted']}}}
 .role{{font-family:{MONO};font-size:20px;fill:{c['accent']};opacity:0;animation:role 12s infinite}}
+.ch{{opacity:0;animation:ch 12s infinite}}
+.cur{{opacity:0;animation:cur 12s infinite}}
 .blob{{filter:url(#blur);opacity:{c['blob']}}}
-.b1{{animation:drift1 14s ease-in-out infinite alternate}}
+.b1{{animation:drift1 14s ease-in-out infinite alternate,breathe 7s ease-in-out infinite alternate}}
 .b2{{animation:drift2 17s ease-in-out infinite alternate}}
-.b3{{animation:drift1 19s ease-in-out infinite alternate-reverse}}
-.sweep{{transform-box:fill-box;transform-origin:left;animation:sweep 5s ease-in-out infinite alternate}}
-@keyframes role{{0%{{opacity:0;transform:translateY(8px)}}4%,22%{{opacity:1;transform:none}}26%,100%{{opacity:0;transform:translateY(-6px)}}}}
+.b3{{animation:drift1 19s ease-in-out infinite alternate-reverse,breathe 9s ease-in-out 2s infinite alternate}}
+.dots{{opacity:.28;animation:dots 6s ease-in-out infinite alternate}}
+.tw{{opacity:0;animation:tw 4.5s ease-in-out infinite}}
+.glint{{animation:glint 3.4s ease-in-out infinite}}
+@keyframes role{{0%{{opacity:0;transform:none}}1%,22%{{opacity:1;transform:none}}26%,100%{{opacity:0;transform:translateY(-6px)}}}}
+@keyframes ch{{0%{{opacity:0}}.3%,100%{{opacity:1}}}}
+@keyframes cur{{0%,13%{{opacity:0}}13.01%,17%{{opacity:1}}17.01%,21%{{opacity:0}}21.01%,25%{{opacity:1}}25.01%,100%{{opacity:0}}}}
 @keyframes drift1{{to{{transform:translate(120px,40px)}}}}
 @keyframes drift2{{to{{transform:translate(-140px,-30px)}}}}
-@keyframes sweep{{from{{transform:scaleX(.25)}}to{{transform:scaleX(1)}}}}
-@media (prefers-reduced-motion:reduce){{.role,.b1,.b2,.b3,.sweep{{animation:none}}.role:first-of-type{{opacity:1}}}}
+@keyframes breathe{{to{{opacity:{min(c['blob'] * 1.45, 0.9):.2f}}}}}
+@keyframes dots{{to{{opacity:.5}}}}
+@keyframes tw{{0%,100%{{opacity:0}}50%{{opacity:.9}}}}
+@keyframes glint{{0%{{transform:translateX(-80px)}}70%,100%{{transform:translateX(240px)}}}}
+@media (prefers-reduced-motion:reduce){{.role,.b1,.b2,.b3,.dots,.tw,.glint,.ch,.cur{{animation:none}}.ch{{opacity:1}}.r0{{opacity:1}}}}
 </style>
 <g clip-path="url(#clip)">
 <rect width="1200" height="300" fill="url(#bg)"/>
 <circle class="blob b1" cx="260" cy="60" r="150" fill="{c['violet']}"/>
 <circle class="blob b2" cx="900" cy="250" r="170" fill="{c['accent']}"/>
 <circle class="blob b3" cx="1080" cy="40" r="110" fill="{c['ochre']}"/>
+<g mask="url(#dotmask)"><rect class="dots" x="640" y="0" width="560" height="300" fill="url(#dots)"/></g>
+{twinkle}
 <text class="hi" x="80" y="120">Hi, I'm Giuseppe</text>
 <text class="sub" x="80" y="164">Software Engineer @ Namirial Group</text>
 {roles}
-<rect class="sweep" x="80" y="240" width="220" height="3" rx="1.5" fill="url(#rule)"/>
+<rect x="80" y="240" width="220" height="3" rx="1.5" fill="url(#rule)"/>
+<g clip-path="url(#ruleclip)"><rect class="glint" x="80" y="239" width="80" height="5" fill="url(#glint)"/></g>
 </g>
 <rect x=".75" y=".75" width="1198.5" height="298.5" rx="21.5" fill="none" stroke="{c['edge']}" stroke-width="1.5"/>
 </svg>
 """
+
+
+def role_text(i: int, role: str) -> str:
+    """One typed line: each character appears in turn, then a blinking cursor."""
+    step = min(0.045, 1.5 / len(role))
+    chars = "".join(
+        f'<tspan class="ch" style="animation-delay:{i * 3 + n * step:.3f}s">{escape(ch if ch != " " else chr(160))}</tspan>'
+        for n, ch in enumerate(role)
+    )
+    cursor = f'<tspan class="cur" style="animation-delay:{i * 3}s">▍</tspan>'
+    first = " r0" if i == 0 else ""
+    return f'<text class="role{first}" style="animation-delay:{i * 3}s" x="80" y="214">{chars}{cursor}</text>'
 
 
 def card(index: int, project: tuple, theme: str, c: dict) -> str:

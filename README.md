@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg?v=1">
-  <img src="assets/header-light.svg?v=1" alt="Hi, I'm Giuseppe. Software Engineer at Namirial Group: backend, APIs, developer tools." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg?v=2">
+  <img src="assets/header-light.svg?v=2" alt="Hi, I'm Giuseppe. Backend engineer: frameworks, APIs and developer tools." width="100%">
 </picture>
 
 <img src="assets/terminal.gif?v=2" alt="Terminal session: whoami, cat about.txt, ls projects/ listing hinoki, django-ninja-aio-crud, goninja, shimwire and lilac-nights" width="100%" />
@@ -267,8 +267,8 @@ Previews — click a language to open it here:
 
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=1">
-  <img src="assets/stack-light.svg?v=1" alt="Languages: Python, Go, TypeScript, JavaScript, Rust, SQL. Backend and frontend: Django, DRF, FastAPI, Django Ninja, Gin, Echo, Huma, GORM, Node.js, Bun, Vue, Next.js, Tailwind CSS. Data and delivery: PostgreSQL, MySQL, SQLite, Redis, Docker, Linux, Nginx, HAProxy, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS. Testing and AI: Pytest, Playwright, Anthropic, OpenAI, Gemini, Perplexity." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg?v=2">
+  <img src="assets/stack-light.svg?v=2" alt="Languages: Python, Go, TypeScript, JavaScript, Rust, SQL. Backend and frontend: Django, DRF, FastAPI, Django Ninja, Gin, Echo, Huma, GORM, Node.js, Bun, Vue, Next.js, Tailwind CSS. Data and delivery: PostgreSQL, MySQL, SQLite, Redis, Docker, Linux, Nginx, HAProxy, GitHub Actions, GitLab, Jenkins, Cloudflare, AWS. Testing and AI: Pytest, Playwright, Anthropic, OpenAI, Gemini, Perplexity." width="100%">
 </picture>
 </div>
 
@@ -289,7 +289,12 @@ Previews — click a language to open it here:
 <!-- ============ CONNECT ============ -->
 ### Connect
 
-<a href="https://caspel26.github.io"><img src="https://img.shields.io/badge/Portfolio-6D28D9?style=flat-square&logo=githubpages&logoColor=white" /></a> <a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a> <a href="mailto:giuseppe@caspel.dev"><img src="https://img.shields.io/badge/Email-D14836?style=flat-square&logo=gmail&logoColor=white" /></a> <a href="https://github.com/caspel26"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" /></a>
+<p>
+<a href="https://caspel26.github.io"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-portfolio-dark.svg?v=1"><img src="assets/connect-portfolio-light.svg?v=1" alt="Portfolio" height="44"></picture></a>
+<a href="https://www.linkedin.com/in/giuseppe-casillo-3737b128b/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-linkedin-dark.svg?v=1"><img src="assets/connect-linkedin-light.svg?v=1" alt="LinkedIn" height="44"></picture></a>
+<a href="mailto:giuseppe@caspel.dev"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-email-dark.svg?v=1"><img src="assets/connect-email-light.svg?v=1" alt="Email" height="44"></picture></a>
+<a href="https://github.com/caspel26"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/connect-github-dark.svg?v=1"><img src="assets/connect-github-light.svg?v=1" alt="GitHub" height="44"></picture></a>
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg?v=1">

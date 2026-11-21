@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127 44" width="127" height="44" role="img" aria-label="LinkedIn">
+<style>
+.t{font-family:system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;font-size:15px;font-weight:600;fill:#1d1a24}
+.mono{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;font-size:11px;font-weight:700}
+</style>
+<rect x=".75" y=".75" width="125.5" height="42.5" rx="21.25" fill="#efeaff" stroke="#ddd5f5" stroke-width="1.5"/>
+<circle cx="28" cy="22" r="8" fill="none" stroke="#6d4fc2" stroke-width="1.5"/><text class="mono" x="28" y="26" text-anchor="middle" fill="#6d4fc2">L</text>
+<text class="t" x="46" y="28">LinkedIn</text>
+</svg>
